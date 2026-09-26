@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1F6B3A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="KhetiSathi: camera monkey guard with sound and light deterrents, crop calendar and fertilizer calculator for Nepali farmers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%20width%3D%22512%22%20height%3D%22512%22%3E%0A%20%20%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22ks-shield%22%3E%3Cpath%20d%3D%22M40%207%20L62%2014.5%20V36%20C62%2052%2052.5%2063%2040%2070.5%20C27.5%2063%2018%2052%2018%2036%20V14.5%20Z%22/%3E%3C/clipPath%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20guard%20sound%20waves%20--%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23E39A0B%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%223.4%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M11.5%2029%20Q7%2039%2011.5%2049%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M68.5%2029%20Q73%2039%2068.5%2049%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M4.5%2023%20Q-1%2039%204.5%2055%22%20opacity%3D%22.5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M75.5%2023%20Q81%2039%2075.5%2055%22%20opacity%3D%22.5%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20shield%20--%3E%0A%20%20%3Cpath%20d%3D%22M40%207%20L62%2014.5%20V36%20C62%2052%2052.5%2063%2040%2070.5%20C27.5%2063%2018%2052%2018%2036%20V14.5%20Z%22%20fill%3D%22%231F6B3A%22/%3E%0A%20%20%3C%21--%20terraced%20field%20--%3E%0A%20%20%3Cg%20clip-path%3D%22url%28%23ks-shield%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2050%20Q40%2041.5%2066%2050%20V76%20H14%20Z%22%20fill%3D%22%236B4226%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2058.5%20Q40%2050.5%2066%2058.5%20V76%20H14%20Z%22%20fill%3D%22%23553319%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2050%20Q40%2041.5%2066%2050%22%20fill%3D%22none%22%20stroke%3D%22%23E39A0B%22%20stroke-width%3D%222.4%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2058.5%20Q40%2050.5%2066%2058.5%22%20fill%3D%22none%22%20stroke%3D%22%238C5A33%22%20stroke-width%3D%221.6%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20sprout%20--%3E%0A%20%20%3Cpath%20d%3D%22M40%2046%20V29%22%20stroke%3D%22%23EAF4E4%22%20stroke-width%3D%223.4%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%0A%20%20%3Cpath%20d%3D%22M40%2037.5%20C31%2037.5%2025%2031.5%2025%2022.5%20C34%2022.5%2040%2028.5%2040%2037.5%20Z%22%20fill%3D%22%238FD17F%22/%3E%0A%20%20%3Cpath%20d%3D%22M40%2031%20C40%2021.5%2046%2015.5%2055.5%2015.5%20C55.5%2025%2049.5%2031%2040%2031%20Z%22%20fill%3D%22%23F2B233%22/%3E%0A%3C/svg%3E%0A">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%20width%3D%22512%22%20height%3D%22512%22%3E%0A%20%20%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22ks-shield%22%3E%3Cpath%20d%3D%22M40%207%20L62%2014.5%20V36%20C62%2052%2052.5%2063%2040%2070.5%20C27.5%2063%2018%2052%2018%2036%20V14.5%20Z%22/%3E%3C/clipPath%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20guard%20sound%20waves%20--%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23E39A0B%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%223.4%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M11.5%2029%20Q7%2039%2011.5%2049%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M68.5%2029%20Q73%2039%2068.5%2049%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M4.5%2023%20Q-1%2039%204.5%2055%22%20opacity%3D%22.5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M75.5%2023%20Q81%2039%2075.5%2055%22%20opacity%3D%22.5%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20shield%20--%3E%0A%20%20%3Cpath%20d%3D%22M40%207%20L62%2014.5%20V36%20C62%2052%2052.5%2063%2040%2070.5%20C27.5%2063%2018%2052%2018%2036%20V14.5%20Z%22%20fill%3D%22%231F6B3A%22/%3E%0A%20%20%3C%21--%20terraced%20field%20--%3E%0A%20%20%3Cg%20clip-path%3D%22url%28%23ks-shield%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2050%20Q40%2041.5%2066%2050%20V76%20H14%20Z%22%20fill%3D%22%236B4226%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2058.5%20Q40%2050.5%2066%2058.5%20V76%20H14%20Z%22%20fill%3D%22%23553319%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2050%20Q40%2041.5%2066%2050%22%20fill%3D%22none%22%20stroke%3D%22%23E39A0B%22%20stroke-width%3D%222.4%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14%2058.5%20Q40%2050.5%2066%2058.5%22%20fill%3D%22none%22%20stroke%3D%22%238C5A33%22%20stroke-width%3D%221.6%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3C%21--%20sprout%20--%3E%0A%20%20%3Cpath%20d%3D%22M40%2046%20V29%22%20stroke%3D%22%23EAF4E4%22%20stroke-width%3D%223.4%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22/%3E%0A%20%20%3Cpath%20d%3D%22M40%2037.5%20C31%2037.5%2025%2031.5%2025%2022.5%20C34%2022.5%2040%2028.5%2040%2037.5%20Z%22%20fill%3D%22%238FD17F%22/%3E%0A%20%20%3Cpath%20d%3D%22M40%2031%20C40%2021.5%2046%2015.5%2055.5%2015.5%20C55.5%2025%2049.5%2031%2040%2031%20Z%22%20fill%3D%22%23F2B233%22/%3E%0A%3C/svg%3E%0A">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<title>KhetiSathi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mukta:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F1F5EC; --surface:#FFFFFF; --surface-2:#E7EEDF; --ink:#17251B; --ink-2:#4B5C4F; --line:#D2DCC7;
+  --paddy:#1F6B3A; --on-paddy:#FFFFFF; --leaf:#3E9B4F; --marigold:#E39A0B; --marigold-ink:#8F5D00; --soil:#6B4226;
+  --ok:#2E8B47; --warn:#C07A00; --crit:#C8342B; --on-crit:#FFFFFF;
+  --sow:#3F9A4E; --grow:#B6DAA9; --harvest:#F0B53A; --cell:#F0F2EE;
+  --shadow:0 1px 2px rgba(23,37,27,.06),0 6px 20px rgba(23,37,27,.06);
+  --display:'Baloo 2','Mukta',system-ui,sans-serif; --body:'Mukta',system-ui,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1611; --surface:#152019; --surface-2:#1C2A20; --ink:#E3EDDF; --ink-2:#A2B4A5; --line:#2A3B2F;
+    --paddy:#62BF7B; --on-paddy:#0B130E; --leaf:#7FCB88; --marigold:#F2B233; --marigold-ink:#F2B233; --soil:#C09068;
+    --ok:#6BCB84; --warn:#F2B233; --crit:#FF6F62; --on-crit:#1A0906;
+    --sow:#57B067; --grow:#2F5537; --harvest:#D9A032; --cell:#1A231D;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1611; --surface:#152019; --surface-2:#1C2A20; --ink:#E3EDDF; --ink-2:#A2B4A5; --line:#2A3B2F;
+  --paddy:#62BF7B; --on-paddy:#0B130E; --leaf:#7FCB88; --marigold:#F2B233; --marigold-ink:#F2B233; --soil:#C09068;
+  --ok:#6BCB84; --warn:#F2B233; --crit:#FF6F62; --on-crit:#1A0906;
+  --sow:#57B067; --grow:#2F5537; --harvest:#D9A032; --cell:#1A231D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:1.55rem;font-weight:700}
+h3{font-size:1.12rem;font-weight:700}
+p{margin:0}
+.ne{font-family:var(--display);font-weight:600;color:var(--ink-2)}
+small,.muted{color:var(--ink-2)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px 14px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:54px;height:54px;flex:none}
+.brand .name{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1}
+.brand .name b{color:var(--paddy);font-weight:800}
+.brand .name i{font-style:normal;color:var(--marigold-ink)}
+.brand .sub{font-family:var(--display);font-weight:600;color:var(--ink-2);font-size:.95rem;margin-top:2px}
+nav.tabs{display:flex;gap:4px;background:var(--surface-2);padding:4px;border-radius:12px;flex-wrap:wrap}
+nav.tabs button{border:0;background:transparent;padding:8px 14px;border-radius:9px;cursor:pointer;font-weight:600;display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}
+nav.tabs button span{font-family:var(--display);font-size:.78rem;font-weight:600;color:var(--ink-2)}
+nav.tabs button[aria-selected="true"]{background:var(--surface);box-shadow:var(--shadow)}
+nav.tabs button[aria-selected="true"] span{color:var(--paddy)}
+section.tab{display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.between{justify-content:space-between}
+.btn{border:1px solid var(--line);background:var(--surface);padding:9px 14px;border-radius:10px;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--ink-2)}
+.btn.primary{background:var(--paddy);color:var(--on-paddy);border-color:var(--paddy)}
+.btn.danger{background:var(--crit);color:var(--on-crit);border-color:var(--crit)}
+.btn.small{padding:5px 10px;font-size:.88rem;border-radius:8px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex-wrap:wrap}
+.seg button{flex:1 1 auto;border:0;background:var(--surface);padding:8px 12px;cursor:pointer;font-weight:600;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* guard layout */
+.guard-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.guard-grid{grid-template-columns:minmax(0,1fr)}}
+.viewer{position:relative;background:#0A110C;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.viewer canvas{display:block;width:100%;height:auto;cursor:default}
+.viewer.editing canvas{cursor:crosshair}
+.viewer .hud{position:absolute;left:10px;right:10px;top:10px;display:flex;justify-content:space-between;gap:8px;pointer-events:none;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;font-weight:700;font-size:.9rem;background:rgba(10,17,12,.78);color:#E9F2E6;backdrop-filter:blur(4px)}
+.pill .dot{width:9px;height:9px;border-radius:50%;background:#7C8B80}
+.pill.watching .dot{background:#5FD07B}
+.pill.motion .dot{background:#F2B233}
+.pill.monkey,.pill.scaring{background:#C8342B;color:#fff}
+.pill.monkey .dot,.pill.scaring .dot{background:#fff;animation:blink .5s steps(1) infinite}
+.pill.cooldown .dot{background:#6FB4F0}
+.pill.sleeping .dot{background:#8B7FD6}
+@keyframes blink{50%{opacity:0}}
+.viewer .msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#E9F2E6;background:rgba(10,17,12,.86)}
+.viewer .msg div{max-width:46ch;display:grid;gap:10px}
+.viewer-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:12px}
+.arm{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);margin-top:12px}
+.arm.on{border-color:var(--paddy);background:color-mix(in srgb,var(--paddy) 9%,var(--surface))}
+.arm .big{font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1}
+.arm .state-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--surface-2)}
+.arm.on .state-ico{background:var(--paddy);color:var(--on-paddy)}
+@media (max-width:520px){.arm{grid-template-columns:1fr}.arm .state-ico{display:none}}
+
+.panel{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.panel h3{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.field{display:grid;gap:6px;min-width:0}
+input[type=file]{max-width:100%;font-size:.9rem}
+.field label,.lbl{font-weight:600;font-size:.95rem}
+.hint{font-size:.85rem;color:var(--ink-2)}
+input[type=range]{width:100%;accent-color:var(--paddy)}
+input[type=checkbox]{accent-color:var(--paddy);width:18px;height:18px}
+input[type=number],input[type=time],select{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 9px;min-width:0}
+.sounds{display:grid;gap:6px}
+.snd{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:7px 10px;border-radius:10px;background:var(--surface-2)}
+.snd .t{line-height:1.15}
+.snd .t small{display:block;font-size:.8rem}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.check{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;cursor:pointer}
+.check input{margin-top:3px}
+.chip{display:inline-block;font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.chip.monkey{background:var(--crit);color:var(--on-crit)}
+.chip.motion{background:var(--marigold);color:#1d1400}
+.chip.patrol{background:var(--paddy);color:var(--on-paddy)}
+.chip.demo{background:transparent;border:1px solid var(--line)}
+.ai-state{font-size:.85rem;font-weight:700}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat .v{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+.stat .k{font-size:.85rem;color:var(--ink-2)}
+@media (max-width:520px){.stats{grid-template-columns:1fr 1fr}}
+.log{display:grid;gap:8px;max-height:420px;overflow:auto}
+.ev{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:8px;border-radius:10px;background:var(--surface-2)}
+.ev img{width:96px;height:54px;object-fit:cover;border-radius:6px;background:#0A110C;display:block}
+.ev .l1{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.ev .time{font-weight:700;font-variant-numeric:tabular-nums}
+.ev .d{font-size:.85rem;color:var(--ink-2)}
+.empty{padding:18px;text-align:center;color:var(--ink-2);border:1px dashed var(--line);border-radius:10px}
+svg.hours text{fill:var(--ink-2);font-size:10px;font-family:var(--body)}
+
+#strobe{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:0}
+#strobe.on{animation:strobe .14s step-end infinite}
+@keyframes strobe{0%{opacity:.92;background:#FFFFFF}50%{opacity:.88;background:#FF2A1A}100%{opacity:.92;background:#FFFFFF}}
+#stopbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:61}
+
+/* crops */
+.crops-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.crops-grid{grid-template-columns:minmax(0,1fr)}}
+.cal-wrap{overflow-x:auto}
+table.cal{border-collapse:separate;border-spacing:2px;width:100%;min-width:640px;font-size:.9rem}
+table.cal th{font-weight:600;font-size:.78rem;color:var(--ink-2);text-align:center;padding:2px;line-height:1.1}
+table.cal th.now{color:var(--ink);}
+table.cal th.now .mn{background:var(--ink);color:var(--bg);border-radius:6px;padding:1px 4px}
+table.cal td{height:30px;border-radius:5px;background:var(--cell)}
+table.cal td.name{background:transparent;white-space:nowrap;padding-right:8px;line-height:1.1}
+table.cal td.name small{display:block;font-family:var(--display);font-weight:600;font-size:.78rem}
+table.cal td.sow{background:var(--sow)}
+table.cal td.grow{background:var(--grow)}
+table.cal td.harvest{background:var(--harvest)}
+table.cal td.nowcol{box-shadow:inset 0 0 0 2px var(--ink)}
+table.cal td.risk{background:transparent;text-align:right}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--ink-2)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px}
+.risk-vh{background:var(--crit);color:var(--on-crit)}
+.risk-h{background:color-mix(in srgb,var(--crit) 55%,var(--marigold));color:#fff}
+.risk-m{background:var(--marigold);color:#1d1400}
+.risk-l{background:var(--surface-2);color:var(--ink-2)}
+.risk-vl{background:var(--paddy);color:var(--on-paddy)}
+.now-box{display:grid;gap:10px}
+.now-box .lists{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.now-box ul{margin:4px 0 0;padding-left:18px}
+.result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.result .r{background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.result .r .v{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.result .r .k{font-size:.82rem;color:var(--ink-2)}
+@media (max-width:520px){.result{grid-template-columns:1fr 1fr}}
+.nutr{font-size:.9rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.barrier{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.barrier div{background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.barrier b{display:block}
+
+/* setup */
+.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px;align-items:start}
+ol.steps{margin:0;padding-left:22px;display:grid;gap:10px}
+ol.steps li::marker{font-family:var(--display);font-weight:800;color:var(--paddy)}
+ul.plain{margin:0;padding-left:18px;display:grid;gap:6px}
+.parts{width:100%;border-collapse:collapse;font-size:.93rem}
+.parts td{padding:7px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+.parts td:first-child{font-weight:600;width:44%}
+pre.code{background:#0F1812;color:#D8E6D6;border-radius:10px;padding:14px;overflow-x:auto;font-size:.8rem;line-height:1.45;margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.note{border-left:4px solid var(--marigold);background:color-mix(in srgb,var(--marigold) 10%,var(--surface));padding:12px 14px;border-radius:0 10px 10px 0}
+.kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:var(--surface-2);padding:1px 5px;border-radius:5px}
+footer{margin-top:28px;font-size:.85rem;color:var(--ink-2);text-align:center}
+@media (prefers-reduced-motion: reduce){.pill .dot{animation:none!important}}
+</style>
+
+</head>
+<body>
+
+
+<div class="wrap">
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 80 80" aria-hidden="true">
+      <defs><clipPath id="ks-sh"><path d="M40 7 L62 14.5 V36 C62 52 52.5 63 40 70.5 C27.5 63 18 52 18 36 V14.5 Z"/></clipPath></defs>
+      <g fill="none" stroke="#E39A0B" stroke-linecap="round" stroke-width="3.4"><path d="M11.5 29 Q7 39 11.5 49"/><path d="M68.5 29 Q73 39 68.5 49"/><path d="M4.5 23 Q-1 39 4.5 55" opacity=".5"/><path d="M75.5 23 Q81 39 75.5 55" opacity=".5"/></g>
+      <path d="M40 7 L62 14.5 V36 C62 52 52.5 63 40 70.5 C27.5 63 18 52 18 36 V14.5 Z" fill="#1F6B3A"/>
+      <g clip-path="url(#ks-sh)"><path d="M14 50 Q40 41.5 66 50 V76 H14 Z" fill="#6B4226"/><path d="M14 58.5 Q40 50.5 66 58.5 V76 H14 Z" fill="#553319"/><path d="M14 50 Q40 41.5 66 50" fill="none" stroke="#E39A0B" stroke-width="2.4"/><path d="M14 58.5 Q40 50.5 66 58.5" fill="none" stroke="#8C5A33" stroke-width="1.6"/></g>
+      <path d="M40 46 V29" stroke="#EAF4E4" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      <path d="M40 37.5 C31 37.5 25 31.5 25 22.5 C34 22.5 40 28.5 40 37.5 Z" fill="#8FD17F"/>
+      <path d="M40 31 C40 21.5 46 15.5 55.5 15.5 C55.5 25 49.5 31 40 31 Z" fill="#F2B233"/>
+    </svg>
+    <div>
+      <div class="name"><b>Kheti</b><i>Sathi</i></div>
+      <div class="sub">खेती साथी · बाली जोगाउने, उत्पादन बढाउने</div>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="t-guard" aria-selected="true" data-tab="guard">Monkey Guard<span>बाँदर धपाउने</span></button>
+    <button role="tab" id="t-crops" aria-selected="false" data-tab="crops">Crop Growth<span>बाली र मल</span></button>
+    <button role="tab" id="t-setup" aria-selected="false" data-tab="setup">Field Setup<span>खेतमा जडान</span></button>
+  </nav>
+</header>
+
+<!-- ================= GUARD ================= -->
+<section class="tab" id="guard" role="tabpanel" aria-labelledby="t-guard">
+  <div class="guard-grid">
+    <div>
+      <div class="viewer" id="viewer">
+        <canvas id="view" width="640" height="360" aria-label="Field camera view"></canvas>
+        <div class="hud">
+          <span class="pill" id="pill"><span class="dot"></span><span id="pillText">Starting…</span></span>
+          <span class="pill" id="srcPill">Demo field</span>
+        </div>
+        <div class="msg" id="viewMsg" hidden><div></div></div>
+      </div>
+
+      <div class="viewer-bar">
+        <div class="seg" role="group" aria-label="Video source">
+          <button id="srcDemo" aria-pressed="true">Demo field</button>
+          <button id="srcCam" aria-pressed="false">Live camera</button>
+          <button id="srcFile" aria-pressed="false">Field video</button>
+        </div>
+        <div class="row">
+          <button class="btn small" id="maskBtn" aria-pressed="false">Ignore areas</button>
+          <button class="btn small" id="maskClear" hidden>Clear ignored</button>
+        </div>
+        <input type="file" id="fileIn" accept="video/*" hidden>
+      </div>
+      <p class="hint" id="maskHint" hidden style="margin-top:6px">Tap squares on the picture that should be ignored, such as trees moving in the wind or a road. Tap again to undo.</p>
+
+      <div class="arm" id="armBox">
+        <div class="state-ico" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path id="armIcoPath" d="M9 12h6"/></svg>
+        </div>
+        <div>
+          <div class="big" id="armTitle">Guard is off <span class="ne">· पहरा बन्द</span></div>
+          <div class="hint" id="armSub">Arm the guard to scare monkeys away with sound and light as soon as they enter.</div>
+        </div>
+        <div class="row">
+          <button class="btn" id="scareNow">Scare now</button>
+          <button class="btn primary" id="armBtn">Arm guard</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <div class="row between" style="margin-bottom:12px">
+          <h3>Monkey visits <span class="ne">· बाँदर आएको रेकर्ड</span></h3>
+          <button class="btn small" id="clearLog">Clear log</button>
+        </div>
+        <div class="stats" style="margin-bottom:14px">
+          <div class="stat"><div class="v" id="stToday">0</div><div class="k">Visits today</div></div>
+          <div class="stat"><div class="v" id="stChased">0</div><div class="k">Chased away today</div></div>
+          <div class="stat"><div class="v" id="stLast">–</div><div class="k">Last visit</div></div>
+        </div>
+        <div class="lbl" style="margin-bottom:4px">Visits by hour of day</div>
+        <div id="hourChart" style="margin-bottom:14px"></div>
+        <div class="log" id="log"></div>
+        <p class="hint" style="margin-top:8px">The log is kept on this device only.</p>
+      </div>
+    </div>
+
+    <!-- control panel -->
+    <div class="panel">
+      <div class="card panel">
+        <h3>Detection <span class="ai-state" id="aiState">Motion sensing</span></h3>
+        <div class="field">
+          <label for="sens">Sensitivity: <span id="sensV">60</span></label>
+          <input type="range" id="sens" min="10" max="100" step="1" value="60">
+          <span class="hint">Higher catches small or far-away monkeys. Lower it if wind or birds cause false alarms.</span>
+        </div>
+        <label class="check" for="aiOn"><input type="checkbox" id="aiOn" checked> <span><b>AI monkey check</b><br><span class="hint">Looks at each movement and scares only when it sees a monkey or langur. Needs internet once to load.</span></span></label>
+        <label class="check" for="anyMotion"><input type="checkbox" id="anyMotion"> <span><b>Scare on any big movement</b><br><span class="hint">Use at the forest edge where only animals come. Also used when AI is not available.</span></span></label>
+      </div>
+
+      <div class="card panel">
+        <h3>Scare with <span class="ne">· धपाउने आवाज</span></h3>
+        <div class="sounds" id="sounds"></div>
+        <div class="field">
+          <label for="customIn">Your own recording (optional)</label>
+          <input type="file" id="customIn" accept="audio/*">
+          <span class="hint">Record a dog, a drum, or people shouting "hat hat" on your phone and add it here.</span>
+        </div>
+        <label class="check" for="strobeOn"><input type="checkbox" id="strobeOn" checked> <span><b>Flash the screen</b> <span class="hint">(bright strobe)</span></span></label>
+        <label class="check" for="torchOn"><input type="checkbox" id="torchOn" checked> <span><b>Flash the phone torch</b> <span class="hint">(live camera on Android)</span></span></label>
+        <div class="field">
+          <label for="vol">Volume: <span id="volV">90</span>%</label>
+          <input type="range" id="vol" min="10" max="100" value="90">
+        </div>
+      </div>
+
+      <div class="card panel">
+        <h3>Timing</h3>
+        <div class="grid2">
+          <div class="field"><label for="dur">Scare length (sec)</label><input type="number" id="dur" min="3" max="30" value="8"></div>
+          <div class="field"><label for="cool">Wait before next (sec)</label><input type="number" id="cool" min="5" max="300" value="25"></div>
+          <div class="field"><label for="from">Guard from</label><input type="time" id="from" value="05:30"></div>
+          <div class="field"><label for="to">Guard until</label><input type="time" id="to" value="19:00"></div>
+        </div>
+        <span class="hint">Monkeys raid in daylight. Outside these hours the guard rests (demo field ignores hours).</span>
+      </div>
+
+      <div class="card panel">
+        <h3>Patrol mode <span class="ne">· बिना क्यामेरा</span></h3>
+        <label class="check" for="patrol"><input type="checkbox" id="patrol"> <span><b>Scare at random times</b><br><span class="hint">Works without a camera. Keeps monkeys unsure, so they stop trusting the field.</span></span></label>
+        <div class="grid2">
+          <div class="field"><label for="pmin">Every (min) from</label><input type="number" id="pmin" min="1" max="120" value="8"></div>
+          <div class="field"><label for="pmax">to (min)</label><input type="number" id="pmax" min="2" max="240" value="20"></div>
+        </div>
+        <span class="hint" id="patrolNext">Patrol is off.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CROPS ================= -->
+<section class="tab" id="crops" role="tabpanel" aria-labelledby="t-crops" hidden>
+  <div class="card">
+    <div class="row between" style="margin-bottom:12px">
+      <div>
+        <h2>Crop calendar <span class="ne">· बाली पात्रो</span></h2>
+        <p class="muted">When to sow and harvest, and how much each crop attracts monkeys.</p>
+      </div>
+      <div class="seg" role="group" aria-label="Region">
+        <button id="zT" aria-pressed="true">Terai / inner Madhes</button>
+        <button id="zH" aria-pressed="false">Mid-hills</button>
+      </div>
+    </div>
+    <div class="cal-wrap"><table class="cal" id="cal"></table></div>
+    <div class="legend" style="margin-top:10px">
+      <span><i style="background:var(--sow)"></i>Sow / plant</span>
+      <span><i style="background:var(--grow)"></i>Growing</span>
+      <span><i style="background:var(--harvest)"></i>Harvest</span>
+      <span><span class="chip risk-vh">Very high</span> monkey risk</span>
+      <span><span class="chip risk-vl">Very low</span> monkeys avoid it</span>
+    </div>
+  </div>
+
+  <div class="crops-grid">
+    <div class="card">
+      <h2>Fertilizer calculator <span class="ne">· मल हिसाब</span></h2>
+      <p class="muted" style="margin-bottom:14px">Enter your land. Get urea, DAP, potash and compost in kilograms.</p>
+      <div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+        <div class="field"><label for="fCrop">Crop</label><select id="fCrop"></select></div>
+        <div class="field"><label for="fArea">Land area</label><input type="number" id="fArea" min="0" step="0.1" value="5"></div>
+        <div class="field"><label for="fUnit">Unit</label>
+          <select id="fUnit">
+            <option value="508.72">Ropani (रोपनी)</option>
+            <option value="31.795">Aana (आना)</option>
+            <option value="338.63">Kattha (कट्ठा)</option>
+            <option value="16.93">Dhur (धुर)</option>
+            <option value="6772.63">Bigha (बिघा)</option>
+            <option value="10000">Hectare</option>
+          </select></div>
+      </div>
+      <div class="result" style="margin-top:16px">
+        <div class="r"><div class="v" id="rUrea">–</div><div class="k">Urea (46% N)</div></div>
+        <div class="r"><div class="v" id="rDap">–</div><div class="k">DAP (18-46-0)</div></div>
+        <div class="r"><div class="v" id="rMop">–</div><div class="k">Potash / MOP (60%)</div></div>
+        <div class="r"><div class="v" id="rFym">–</div><div class="k" id="rFymK">Compost / FYM</div></div>
+        <div class="r"><div class="v" id="rBags">–</div><div class="k">50 kg bags to buy</div></div>
+        <div class="r"><div class="v" id="rHa">–</div><div class="k">Area in hectare</div></div>
+      </div>
+      <p class="nutr" id="rNutr" style="margin-top:10px"></p>
+      <div class="note" style="margin-top:12px"><b>When to apply:</b> <span id="rSplit"></span></div>
+      <p class="hint" style="margin-top:10px">Typical recommended doses for improved varieties in Nepal. A soil test at your nearest Agriculture Knowledge Centre (कृषि ज्ञान केन्द्र) gives the exact amount for your field.</p>
+    </div>
+
+    <div class="card now-box">
+      <h2>This month <span class="ne" id="nowMonth"></span></h2>
+      <div class="lists">
+        <div><b>Sow / plant now</b><ul id="nowSow"></ul></div>
+        <div><b>Harvest now</b><ul id="nowHarv"></ul></div>
+      </div>
+      <div>
+        <h3 style="margin:8px 0 6px">Grow what monkeys avoid</h3>
+        <p class="muted" style="margin-bottom:10px">Plant a 5–10 m strip of these on the side facing the forest. Monkeys find nothing to eat at the edge and your maize and vegetables sit further inside.</p>
+        <div class="barrier">
+          <div><b>Ginger · अदुवा</b><small>Good price, shade tolerant</small></div>
+          <div><b>Turmeric · बेसार</b><small>Monkeys leave it alone</small></div>
+          <div><b>Chilli · खुर्सानी</b><small>Pungent, rarely touched</small></div>
+          <div><b>Garlic · लसुन</b><small>Strong smell</small></div>
+          <div><b>Colocasia · पिँडालु</b><small>Itchy leaves and corms</small></div>
+          <div><b>Cardamom · अलैंची</b><small>Hill option under shade</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SETUP ================= -->
+<section class="tab" id="setup" role="tabpanel" aria-labelledby="t-setup" hidden>
+  <div class="card">
+    <h2>Put the guard in your field <span class="ne">· खेतमा पहरा राख्ने तरिका</span></h2>
+    <p class="muted" style="margin-top:4px;max-width:70ch">An old Android phone becomes a watchman: its camera sees the monkeys, the app decides, and a loudspeaker scares them. Everything runs on the phone, no internet needed after the first load.</p>
+  </div>
+  <div class="setup-grid">
+    <div class="card">
+      <h3 style="margin-bottom:10px">Set up the phone</h3>
+      <ol class="steps">
+        <li><b>Open KhetiSathi on the phone in Chrome.</b> The live camera needs a secure web address (https) or the KhetiSathi file opened directly in Chrome on a laptop. Put the file on a free host such as Netlify Drop or GitHub Pages, then open that link on the phone.</li>
+        <li><b>Add it to the home screen</b> from the Chrome menu so it opens like an app.</li>
+        <li><b>Choose Live camera</b> and allow camera access. Point it at the path monkeys use from the forest.</li>
+        <li><b>Mark ignore areas</b> over trees and roads that move or carry people.</li>
+        <li><b>Connect a loud speaker</b> by Bluetooth or cable. The phone speaker alone is too quiet for a field.</li>
+        <li><b>Set guard hours</b>, keep the sounds varied, then press <span class="kbd">Arm guard</span>. The screen stays on while the guard is armed.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px">Mount it on a pole</h3>
+      <ol class="steps">
+        <li>Use a 2–3 m bamboo pole at the field corner facing the forest edge.</li>
+        <li>Put the phone in a clear plastic box or a cut bottle so rain cannot reach it. Keep the lens clean.</li>
+        <li>Tilt the camera down so the sky is mostly out of the picture. Moving clouds cause false alarms.</li>
+        <li>Place the speaker facing the forest, not your house.</li>
+        <li>Power it with a 20 W solar panel and a power bank or a small 12 V battery with charge controller.</li>
+      </ol>
+      <table class="parts" style="margin-top:14px">
+        <tr><td>Old Android phone</td><td>Android 8 or newer, working back camera</td></tr>
+        <tr><td>Loudspeaker</td><td>10 W or more, Bluetooth or AUX</td></tr>
+        <tr><td>Power</td><td>20,000 mAh power bank, or 20 W solar panel + battery</td></tr>
+        <tr><td>Housing</td><td>Plastic box, bamboo pole, cable ties</td></tr>
+        <tr><td>Optional</td><td>LED flood light for the torch-style flash at dusk</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px">Stop monkeys getting used to it</h3>
+      <ul class="plain">
+        <li>Monkeys learn fast. One repeated sound stops working in days. Keep at least four sounds on so the app mixes them.</li>
+        <li>Move the pole every week or two, and use Patrol mode as well.</li>
+        <li>Now and then, follow an alarm by walking out with a dog or a stick. Monkeys learn the sound means a person is coming.</li>
+        <li>Clear bushes 10–20 m from the field edge so monkeys have no cover to wait in.</li>
+        <li>Never leave food waste or fallen fruit near the field.</li>
+        <li>Guard in turns with neighbours. A whole slope guarded together works far better than one field.</li>
+        <li>Scare, never hurt. Monkeys and langurs are respected and can bite when cornered.</li>
+      </ul>
+      <p class="note" style="margin-top:12px">Use the Visits by hour chart to see when raids happen, then plan your own rounds for those hours.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row between" style="margin-bottom:8px">
+      <div>
+        <h3>No phone? Build a sensor post · सेन्सर पोल</h3>
+        <p class="muted" style="max-width:72ch">An Arduino Nano with a motion sensor plays random scare sounds from an SD card and flashes a light. Cost is low, and it runs for days on a 12 V battery.</p>
+      </div>
+      <button class="btn small" id="copyCode">Copy code</button>
+    </div>
+    <table class="parts" style="margin:6px 0 12px">
+      <tr><td>Arduino Nano (or Uno)</td><td>The controller</td></tr>
+      <tr><td>HC-SR501 PIR motion sensor</td><td>OUT → pin D2, range up to about 7 m</td></tr>
+      <tr><td>DFPlayer Mini + micro SD card</td><td>RX ← D11 via 1 kΩ, TX → D10. Save sounds as 0001.mp3, 0002.mp3 …</td></tr>
+      <tr><td>Speaker 8 Ω 3 W, or amplifier + horn</td><td>On DFPlayer SPK1/SPK2, or amplifier for more volume</td></tr>
+      <tr><td>MOSFET module + 12 V LED light</td><td>Signal on D6 for the flashing light</td></tr>
+      <tr><td>Relay module + 12 V siren (optional)</td><td>Signal on D7, on during the scare</td></tr>
+    </table>
+    <pre class="code" id="code"></pre>
+  </div>
+</section>
+
+<footer>KhetiSathi · खेती साथी — made for farmers who share their slopes with monkeys.</footer>
+</div>
+
+<div id="strobe" aria-hidden="true"></div>
+<div id="stopbar" hidden><button class="btn danger" id="stopBtn">Stop scaring</button></div>
+<video id="vid" playsinline muted hidden></video>
+
+<script>
+(function(){
+'use strict';
+const $ = s => document.querySelector(s);
+const reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = {
+  get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+
+/* ---------------- tabs ---------------- */
+const tabs = [...document.querySelectorAll('nav.tabs button')];
+function showTab(id){
+  tabs.forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === id)));
+  ['guard','crops','setup'].forEach(t => { document.getElementById(t).hidden = t !== id; });
+  try{ history.replaceState(null,'','#'+id); }catch(e){}
+}
+tabs.forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+if (['guard','crops','setup'].includes(location.hash.slice(1))) showTab(location.hash.slice(1));
+
+/* ---------------- settings ---------------- */
+const SOUND_LIST = [
+  {id:'bark',    name:'Dog barking',      ne:'कुकुर भुकेको'},
+  {id:'crackers',name:'Firecrackers',     ne:'पड्काउने आवाज'},
+  {id:'leopard', name:'Leopard call',     ne:'चितुवाको घुर्काइ'},
+  {id:'thali',   name:'Thali banging',    ne:'थाल ठटाएको'},
+  {id:'siren',   name:'Siren',            ne:'साइरन'},
+  {id:'whistle', name:'Sharp whistle',    ne:'तिखो सिट्टी'},
+  {id:'custom',  name:'My recording',     ne:'आफ्नै आवाज'}
+];
+const defaults = {sens:60, ai:true, anyMotion:false, vol:90, dur:8, cool:25, strobe:!reduced, torch:true,
+  from:'05:30', to:'19:00', patrol:false, pmin:8, pmax:20,
+  sounds:{bark:true,crackers:true,leopard:true,thali:true,siren:true,whistle:false,custom:false}};
+const S = Object.assign({}, defaults, store.get('ks_settings', {}));
+S.sounds = Object.assign({}, defaults.sounds, S.sounds || {});
+S.sounds.custom = false; // recording must be re-added each session
+const save = () => store.set('ks_settings', S);
+
+const soundsBox = $('#sounds');
+SOUND_LIST.forEach(s => {
+  const row = document.createElement('div'); row.className = 'snd';
+  row.innerHTML = `<input type="checkbox" id="snd-${s.id}" ${S.sounds[s.id]?'checked':''} ${s.id==='custom'?'disabled':''}>
+    <label class="t" for="snd-${s.id}"><b>${s.name}</b><small class="ne">${s.ne}</small></label>
+    <button class="btn small" data-test="${s.id}" ${s.id==='custom'?'disabled':''}>Test</button>`;
+  soundsBox.appendChild(row);
+});
+soundsBox.addEventListener('change', e => {
+  const id = e.target.id.replace('snd-',''); S.sounds[id] = e.target.checked; save();
+});
+soundsBox.addEventListener('click', e => {
+  const b = e.target.closest('[data-test]'); if(!b) return;
+  ensureAudio(); stopAll(); const t = ac.currentTime + 0.05; SOUNDS[b.dataset.test](t);
+});
+
+function bindRange(id, key, out){ const el = $('#'+id); el.value = S[key]; if(out) $(out).textContent = S[key];
+  el.addEventListener('input', () => { S[key] = +el.value; if(out) $(out).textContent = el.value; if(key==='vol' && master) master.gain.value = S.vol/100; save(); }); }
+function bindNum(id, key){ const el = $('#'+id); el.value = S[key]; el.addEventListener('change', () => { let v = +el.value; if(isNaN(v)) v = defaults[key]; v = Math.max(+el.min||0, Math.min(+el.max||9999, v)); el.value = v; S[key] = v; save(); if(key==='pmin'||key==='pmax') schedulePatrol(); }); }
+function bindChk(id, key, fn){ const el = $('#'+id); el.checked = !!S[key]; el.addEventListener('change', () => { S[key] = el.checked; save(); fn && fn(); }); }
+function bindTime(id, key){ const el = $('#'+id); el.value = S[key]; el.addEventListener('change', () => { if(el.value){ S[key] = el.value; save(); } }); }
+bindRange('sens','sens','#sensV'); bindRange('vol','vol','#volV');
+bindNum('dur','dur'); bindNum('cool','cool'); bindNum('pmin','pmin'); bindNum('pmax','pmax');
+bindChk('aiOn','ai', () => { if(S.ai && source !== 'demo') loadAI(); updateAIState(); });
+bindChk('anyMotion','anyMotion'); bindChk('strobeOn','strobe'); bindChk('torchOn','torch');
+bindChk('patrol','patrol', () => schedulePatrol());
+bindTime('from','from'); bindTime('to','to');
+
+/* ---------------- audio: synthesized deterrents ---------------- */
+let ac = null, master = null, comp = null, noiseBuf = null, customBuf = null, lastSound = '';
+function ensureAudio(){
+  if(!ac){
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    comp = ac.createDynamicsCompressor(); comp.threshold.value = -8; comp.ratio.value = 4;
+    comp.connect(ac.destination);
+    master = ac.createGain(); master.gain.value = S.vol/100; master.connect(comp);
+    const len = ac.sampleRate * 2; noiseBuf = ac.createBuffer(1, len, ac.sampleRate);
+    const d = noiseBuf.getChannelData(0); for(let i=0;i<len;i++) d[i] = Math.random()*2-1;
+  }
+  if(ac.state === 'suspended') ac.resume();
+  return ac;
+}
+function stopAll(){
+  if(!ac) return;
+  const old = master; old.gain.setTargetAtTime(0, ac.currentTime, 0.02);
+  setTimeout(() => { try{ old.disconnect(); }catch(e){} }, 300);
+  master = ac.createGain(); master.gain.value = S.vol/100; master.connect(comp);
+}
+function noiseSrc(t, dur){ const s = ac.createBufferSource(); s.buffer = noiseBuf; s.loop = true; s.start(t, Math.random()*1.5); s.stop(t+dur+0.05); return s; }
+function env(g, t, a, peak, d){ g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t+a); g.gain.exponentialRampToValueAtTime(0.0001, t+a+d); }
+function filt(type, f, q){ const b = ac.createBiquadFilter(); b.type = type; b.frequency.value = f; if(q) b.Q.value = q; return b; }
+
+const SOUNDS = {
+  bark(t){
+    const n = 2 + Math.floor(Math.random()*3); let s = t;
+    for(let i=0;i<n;i++){
+      const o = ac.createOscillator(); o.type = 'sawtooth';
+      const f0 = 360 + Math.random()*160;
+      o.frequency.setValueAtTime(f0*0.8, s); o.frequency.linearRampToValueAtTime(f0, s+0.03); o.frequency.exponentialRampToValueAtTime(f0*0.5, s+0.16);
+      const g = ac.createGain(); env(g, s, 0.01, 0.9, 0.17);
+      o.connect(filt('bandpass', 1000, 0.8)).connect(g).connect(master);
+      o.start(s); o.stop(s+0.25);
+      const ng = ac.createGain(); env(ng, s, 0.005, 0.55, 0.12);
+      noiseSrc(s, 0.2).connect(filt('bandpass', 1700, 1.1)).connect(ng).connect(master);
+      s += (i % 2 ? 0.34 : 0.22) + Math.random()*0.1;
+    }
+    return s - t + 0.2;
+  },
+  crackers(t){
+    let s = t; const n = 10 + Math.floor(Math.random()*10);
+    for(let i=0;i<n;i++){
+      const g = ac.createGain(); env(g, s, 0.001, 1.0, 0.05 + Math.random()*0.09);
+      noiseSrc(s, 0.18).connect(filt('highpass', 500 + Math.random()*1200)).connect(g).connect(master);
+      s += 0.035 + Math.random()*0.17;
+    }
+    s += 0.12;
+    const g = ac.createGain(); env(g, s, 0.002, 1.0, 0.5);
+    noiseSrc(s, 0.6).connect(filt('lowpass', 800)).connect(g).connect(master);
+    return s - t + 0.6;
+  },
+  leopard(t){
+    const n = 6 + Math.floor(Math.random()*5);
+    for(let i=0;i<n;i++){
+      const s = t + i*0.44, inhale = i % 2 === 1;
+      const o = ac.createOscillator(); o.type = 'sawtooth';
+      o.frequency.setValueAtTime(inhale ? 95 : 72, s); o.frequency.linearRampToValueAtTime(inhale ? 125 : 58, s+0.3);
+      const g = ac.createGain();
+      g.gain.setValueAtTime(0.0001, s); g.gain.linearRampToValueAtTime(0.95, s+0.05); g.gain.linearRampToValueAtTime(0.6, s+0.22); g.gain.exponentialRampToValueAtTime(0.0001, s+0.34);
+      const am = ac.createOscillator(); am.frequency.value = 26 + Math.random()*8; const amg = ac.createGain(); amg.gain.value = 0.35;
+      am.connect(amg).connect(g.gain);
+      o.connect(filt('lowpass', 750)).connect(g).connect(master);
+      o.start(s); o.stop(s+0.36); am.start(s); am.stop(s+0.36);
+      const ng = ac.createGain(); env(ng, s, 0.04, 0.4, 0.27);
+      noiseSrc(s, 0.34).connect(filt('bandpass', 380, 0.7)).connect(ng).connect(master);
+    }
+    return n*0.44 + 0.2;
+  },
+  thali(t){
+    const partials = [523, 1187, 1741, 2403, 3310, 4150];
+    const n = 6 + Math.floor(Math.random()*6); let s = t;
+    for(let i=0;i<n;i++){
+      partials.forEach((f,k) => {
+        const o = ac.createOscillator(); o.frequency.value = f * (1 + (Math.random()-0.5)*0.012);
+        const g = ac.createGain(); env(g, s, 0.002, 0.3/(k*0.6+1), 0.45 + (5-k)*0.08);
+        o.connect(g).connect(master); o.start(s); o.stop(s+1.0);
+      });
+      const g = ac.createGain(); env(g, s, 0.001, 0.7, 0.03);
+      noiseSrc(s, 0.06).connect(filt('highpass', 3000)).connect(g).connect(master);
+      s += (i % 3 === 2) ? 0.42 : 0.19;
+    }
+    return s - t + 0.7;
+  },
+  siren(t){
+    const d = 3.2;
+    const o = ac.createOscillator(); o.type = 'sawtooth'; o.frequency.value = 950;
+    const lfo = ac.createOscillator(); lfo.type = 'triangle'; lfo.frequency.value = Math.random() < 0.5 ? 0.8 : 3.6;
+    const lg = ac.createGain(); lg.gain.value = 400; lfo.connect(lg).connect(o.frequency);
+    const g = ac.createGain();
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.5, t+0.1); g.gain.setValueAtTime(0.5, t+d-0.2); g.gain.exponentialRampToValueAtTime(0.0001, t+d);
+    o.connect(filt('lowpass', 2600)).connect(g).connect(master);
+    o.start(t); o.stop(t+d); lfo.start(t); lfo.stop(t+d);
+    return d + 0.1;
+  },
+  whistle(t){
+    const d = 2.4; const o = ac.createOscillator();
+    for(let i=0;i<4;i++){ o.frequency.setValueAtTime(9000, t+i*0.6); o.frequency.exponentialRampToValueAtTime(17500, t+i*0.6+0.55); }
+    const g = ac.createGain();
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.3, t+0.05); g.gain.setValueAtTime(0.3, t+d-0.1); g.gain.exponentialRampToValueAtTime(0.0001, t+d);
+    o.connect(g).connect(master); o.start(t); o.stop(t+d);
+    return d + 0.1;
+  },
+  custom(t){
+    if(!customBuf) return 0.1;
+    const s = ac.createBufferSource(); s.buffer = customBuf; s.connect(master); s.start(t);
+    const d = Math.min(customBuf.duration, 10); s.stop(t+d); return d + 0.1;
+  }
+};
+
+$('#customIn').addEventListener('change', async e => {
+  const f = e.target.files[0]; if(!f) return;
+  ensureAudio();
+  try{
+    customBuf = await ac.decodeAudioData(await f.arrayBuffer());
+    const cb = $('#snd-custom'); cb.disabled = false; cb.checked = true; S.sounds.custom = true;
+    document.querySelector('[data-test="custom"]').disabled = false;
+  }catch(err){ alertInline('That audio file could not be read. Try an MP3 or M4A recording.'); }
+});
+
+/* ---------------- strobe + torch ---------------- */
+let torchTimer = null, camTrack = null;
+function lightsOn(ms){
+  if(S.strobe){ $('#strobe').classList.add('on'); }
+  if(S.torch && camTrack && camTrack.getCapabilities && (camTrack.getCapabilities().torch)){
+    let on = false;
+    torchTimer = setInterval(() => { on = !on; camTrack.applyConstraints({advanced:[{torch:on}]}).catch(()=>{}); }, 160);
+  }
+  $('#stopbar').hidden = false;
+  clearTimeout(lightsOn._t); lightsOn._t = setTimeout(lightsOff, ms);
+}
+function lightsOff(){
+  $('#strobe').classList.remove('on'); $('#stopbar').hidden = true;
+  if(torchTimer){ clearInterval(torchTimer); torchTimer = null; camTrack && camTrack.applyConstraints({advanced:[{torch:false}]}).catch(()=>{}); }
+}
+
+/* ---------------- guard state ---------------- */
+let armed = false, source = 'demo', scareUntil = 0, cooldownUntil = 0, status = 'idle', statusText = '';
+let wakeLock = null;
+async function keepAwake(){ try{ if('wakeLock' in navigator){ wakeLock = await navigator.wakeLock.request('screen'); } }catch(e){} }
+document.addEventListener('visibilitychange', () => { if(armed && document.visibilityState === 'visible') keepAwake(); });
+
+function inHours(){
+  if(source === 'demo') return true;
+  const d = new Date(), m = d.getHours()*60 + d.getMinutes();
+  const [fh,fm] = S.from.split(':').map(Number), [th,tm] = S.to.split(':').map(Number);
+  const f = fh*60+fm, t = th*60+tm;
+  return f <= t ? (m >= f && m < t) : (m >= f || m < t);
+}
+function setStatus(s, text){
+  status = s; statusText = text;
+  const p = $('#pill'); p.className = 'pill ' + s; $('#pillText').textContent = text;
+}
+function refreshArm(){
+  const box = $('#armBox'); box.classList.toggle('on', armed);
+  $('#armBtn').textContent = armed ? 'Turn off' : 'Arm guard';
+  $('#armBtn').className = armed ? 'btn' : 'btn primary';
+  $('#armTitle').innerHTML = armed ? 'Guard is on <span class="ne">· पहरा चालु</span>' : 'Guard is off <span class="ne">· पहरा बन्द</span>';
+  $('#armSub').textContent = armed
+    ? (source === 'demo' ? 'Watching the demo field. The next monkey will be chased away.' : 'Watching your field. Keep this screen open; it stays awake while armed.')
+    : 'Arm the guard to scare monkeys away with sound and light as soon as they enter.';
+  $('#armIcoPath').setAttribute('d', armed ? 'M8.5 12.5l2.5 2.5 4.5-5' : 'M9 12h6');
+}
+$('#armBtn').addEventListener('click', () => {
+  armed = !armed;
+  if(armed){ ensureAudio(); keepAwake(); }
+  else { stopAll(); lightsOff(); scareUntil = 0; if(wakeLock){ wakeLock.release().catch(()=>{}); wakeLock = null; } }
+  refreshArm(); schedulePatrol();
+});
+$('#scareNow').addEventListener('click', () => { scareUntil = 0; cooldownUntil = 0; startScare('manual', null); });
+$('#stopBtn').addEventListener('click', () => { stopAll(); lightsOff(); scareUntil = performance.now(); });
+
+function startScare(kind, info){
+  const now = performance.now();
+  if(now < scareUntil) return;
+  ensureAudio();
+  const list = SOUND_LIST.map(s => s.id).filter(id => S.sounds[id] && (id !== 'custom' || customBuf));
+  if(!list.length) list.push('bark');
+  let t = ac.currentTime + 0.05; const start = t; const used = [];
+  let last = lastSound;
+  while(t - start < S.dur){
+    let pick, tries = 0;
+    do { pick = list[Math.floor(Math.random()*list.length)]; tries++; } while(pick === last && list.length > 1 && tries < 12);
+    const d = SOUNDS[pick](t); t += d + 0.15 + Math.random()*0.45; last = pick;
+    if(!used.includes(pick)) used.push(pick);
+  }
+  lastSound = last;
+  const ms = (t - start) * 1000;
+  scareUntil = now + ms; cooldownUntil = scareUntil + S.cool*1000;
+  lightsOn(ms);
+  if(source === 'demo') demo.scare();
+  logEvent(kind, info, used);
+}
+
+/* ---------------- patrol ---------------- */
+let patrolTimer = null, patrolAt = 0;
+function schedulePatrol(){
+  clearTimeout(patrolTimer); patrolTimer = null; patrolAt = 0;
+  if(!S.patrol){ $('#patrolNext').textContent = 'Patrol is off.'; return; }
+  if(!armed){ $('#patrolNext').textContent = 'Patrol starts when you arm the guard.'; return; }
+  const lo = Math.min(S.pmin, S.pmax), hi = Math.max(S.pmin, S.pmax);
+  const mins = lo + Math.random()*(hi-lo);
+  patrolAt = Date.now() + mins*60000;
+  patrolTimer = setTimeout(() => {
+    if(armed && inHours() && performance.now() >= scareUntil) startScare('patrol', null);
+    schedulePatrol();
+  }, mins*60000);
+  updatePatrolText();
+}
+function updatePatrolText(){
+  if(!patrolAt) return;
+  const left = Math.max(0, Math.round((patrolAt - Date.now())/60000));
+  $('#patrolNext').textContent = `Next random scare in about ${left} min.`;
+}
+setInterval(updatePatrolText, 30000);
+
+/* ---------------- event log ---------------- */
+let events = store.get('ks_events', []);
+const session = []; // demo events, not saved
+const KIND = {monkey:['Monkey','monkey'], motion:['Movement','motion'], patrol:['Patrol','patrol'], manual:['Manual',''], seen:['Seen · guard off','']};
+function logEvent(kind, info, used){
+  const ev = { t: Date.now(), kind, p: info && info.p != null ? Math.round(info.p*100) : null, label: info && info.label || '',
+    sounds: used || [], thumb: snapshot(), demo: source === 'demo' };
+  if(ev.demo) session.unshift(ev); else { events.unshift(ev); events = events.slice(0, 150); store.set('ks_events', events); }
+  renderLog();
+}
+function allEvents(){ return session.concat(events).sort((a,b) => b.t - a.t); }
+function renderLog(){
+  const list = allEvents(); const box = $('#log');
+  const today = new Date().toDateString();
+  const visits = list.filter(e => ['monkey','motion','seen'].includes(e.kind));
+  const todayV = visits.filter(e => new Date(e.t).toDateString() === today);
+  $('#stToday').textContent = todayV.length;
+  $('#stChased').textContent = todayV.filter(e => e.kind !== 'seen').length;
+  $('#stLast').textContent = visits.length ? fmtTime(visits[0].t) : '–';
+  if(!list.length){ box.innerHTML = '<div class="empty">No visits yet. Each monkey visit appears here with a photo, the time, and the sounds used.</div>'; }
+  else box.innerHTML = list.slice(0, 60).map(e => {
+    const k = KIND[e.kind] || [e.kind,''];
+    const names = e.sounds.map(id => (SOUND_LIST.find(s => s.id === id) || {name:id}).name).join(', ');
+    const d = new Date(e.t);
+    const detail = [e.p != null ? `${e.label || 'monkey'} ${e.p}%` : '', names ? 'Scared with ' + names : (e.kind === 'seen' ? 'Not scared, guard was off' : '')].filter(Boolean).join(' · ');
+    return `<div class="ev">${e.thumb ? `<img src="${e.thumb}" alt="">` : '<img alt="">'}
+      <div><div class="l1"><span class="time">${fmtTime(e.t)}</span><span class="d">${d.toLocaleDateString(undefined,{day:'numeric',month:'short'})}</span><span class="chip ${k[1]}">${k[0]}</span>${e.demo ? '<span class="chip demo">Demo</span>' : ''}</div>
+      <div class="d">${detail}</div></div></div>`;
+  }).join('');
+  renderHours(visits);
+}
+function fmtTime(t){ return new Date(t).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}); }
+function renderHours(visits){
+  const h = new Array(24).fill(0); visits.forEach(e => h[new Date(e.t).getHours()]++);
+  const max = Math.max(1, ...h), W = 480, H = 110, pad = 18, bw = (W - 8) / 24;
+  let s = `<svg class="hours" viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Visits by hour">`;
+  s += `<line x1="4" x2="${W-4}" y1="${H-pad}" y2="${H-pad}" stroke="var(--line)"/>`;
+  h.forEach((v,i) => {
+    const bh = v ? Math.max(3, (H - pad - 14) * v / max) : 0, x = 4 + i*bw;
+    if(v) s += `<rect x="${x+2}" y="${H-pad-bh}" width="${bw-4}" height="${bh}" rx="3" fill="var(--marigold)"><title>${i}:00 – ${v}</title></rect>`;
+    if(v === max && v) s += `<text x="${x+bw/2}" y="${H-pad-bh-4}" text-anchor="middle">${v}</text>`;
+    if(i % 6 === 0 || i === 23) s += `<text x="${x+bw/2}" y="${H-4}" text-anchor="middle">${String(i).padStart(2,'0')}</text>`;
+  });
+  s += '</svg>'; $('#hourChart').innerHTML = s;
+}
+const clearBtn = $('#clearLog'); let clearArm = 0;
+clearBtn.addEventListener('click', () => {
+  if(Date.now() - clearArm < 3000){ events = []; session.length = 0; store.set('ks_events', events); renderLog(); clearBtn.textContent = 'Clear log'; clearArm = 0; }
+  else { clearArm = Date.now(); clearBtn.textContent = 'Tap again to clear'; setTimeout(() => { clearBtn.textContent = 'Clear log'; }, 3000); }
+});
+
+/* ---------------- sources ---------------- */
+const view = $('#view'), vctx = view.getContext('2d');
+const vid = $('#vid');
+let camStream = null;
+function setSourceButtons(){
+  $('#srcDemo').setAttribute('aria-pressed', String(source === 'demo'));
+  $('#srcCam').setAttribute('aria-pressed', String(source === 'camera'));
+  $('#srcFile').setAttribute('aria-pressed', String(source === 'file'));
+  $('#srcPill').textContent = source === 'demo' ? 'Demo field' : source === 'camera' ? 'Live camera' : 'Field video';
+}
+function stopCam(){ if(camStream){ camStream.getTracks().forEach(t => t.stop()); camStream = null; camTrack = null; } }
+function showMsg(html){ const m = $('#viewMsg'); if(!html){ m.hidden = true; return; } m.querySelector('div').innerHTML = html; m.hidden = false; }
+function alertInline(text){ showMsg(`<p>${text}</p><div><button class="btn small" id="msgOk">OK</button></div>`); const b = $('#msgOk'); b && b.addEventListener('click', () => showMsg(null)); }
+function resetBg(){ bg = null; motionFrames = 0; curBox = null; }
+
+$('#srcDemo').addEventListener('click', () => { stopCam(); vid.pause(); source = 'demo'; resetBg(); showMsg(null); setSourceButtons(); refreshArm(); updateAIState(); });
+$('#srcCam').addEventListener('click', async () => {
+  stopCam(); vid.pause(); source = 'camera'; resetBg(); setSourceButtons(); refreshArm();
+  showMsg('<p>Asking for the camera…</p>');
+  try{
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error('NoCamera');
+    camStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}, width:{ideal:1280}, height:{ideal:720}}, audio:false});
+    camTrack = camStream.getVideoTracks()[0];
+    vid.srcObject = camStream; vid.loop = false; await vid.play();
+    showMsg(null); if(S.ai) loadAI(); updateAIState();
+  }catch(err){
+    showMsg(`<p><b>The camera could not start here.</b></p>
+      <p>Some pages, such as a shared preview, are not allowed to use the camera. Open the KhetiSathi file directly in Chrome on a laptop, or from a https link on your phone (see Field Setup). Allow camera access when asked.</p>
+      <p class="hint" style="color:#b9c8bb">Reason: ${(err && (err.name || err.message)) || 'unknown'}</p>
+      <div class="row" style="justify-content:center"><button class="btn small" id="msgDemo">Back to demo</button><button class="btn small" id="msgVid">Use a field video</button></div>`);
+    $('#msgDemo').addEventListener('click', () => $('#srcDemo').click());
+    $('#msgVid').addEventListener('click', () => $('#fileIn').click());
+  }
+});
+$('#srcFile').addEventListener('click', () => $('#fileIn').click());
+$('#fileIn').addEventListener('change', async e => {
+  const f = e.target.files[0]; if(!f) return;
+  stopCam(); source = 'file'; resetBg(); setSourceButtons(); refreshArm();
+  vid.srcObject = null; vid.src = URL.createObjectURL(f); vid.loop = true; vid.muted = true;
+  try{ await vid.play(); showMsg(null); }catch(err){ alertInline('This video could not be played. Try an MP4 file from your phone.'); }
+  if(S.ai) loadAI(); updateAIState();
+  e.target.value = '';
+});
+
+/* ---------------- AI monkey check (MobileNet, loaded on demand) ---------------- */
+let model = null, aiStatus = 'off', aiPromise = null;
+const PRIMATE = /monkey|macaque|langur|baboon|guenon|colobus|capuchin|marmoset|titi|patas|gibbon|siamang|chimpanzee|gorilla|orangutan|lemur|indri/i;
+function loadScript(src){ return new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => rej(new Error('script')); document.head.appendChild(s); }); }
+function withTimeout(p, ms){ return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))]); }
+function loadAI(){
+  if(model || aiPromise) return aiPromise;
+  aiStatus = 'loading'; updateAIState();
+  aiPromise = (async () => {
+    try{
+      if(!window.tf) await loadScript('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js');
+      if(!window.mobilenet) await loadScript('https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js');
+      model = await withTimeout(mobilenet.load({version:2, alpha:1.0}), 45000);
+      aiStatus = 'ready';
+    }catch(e){ aiStatus = 'fail'; aiPromise = null; }
+    updateAIState();
+  })();
+  return aiPromise;
+}
+function updateAIState(){
+  const el = $('#aiState');
+  if(source === 'demo'){ el.textContent = 'Motion sensing (demo)'; el.style.color = 'var(--ink-2)'; return; }
+  if(!S.ai){ el.textContent = 'Motion only'; el.style.color = 'var(--ink-2)'; return; }
+  const map = {off:['AI off','var(--ink-2)'], loading:['Loading AI…','var(--warn)'], ready:['AI ready','var(--ok)'], fail:['AI not available, motion only','var(--warn)']};
+  const m = map[aiStatus]; el.textContent = m[0]; el.style.color = m[1];
+}
+async function classifyBox(src, sw, sh, box){
+  const c = document.createElement('canvas'); c.width = c.height = 224; const cx = c.getContext('2d');
+  const bx = box.x*sw, by = box.y*sh, bw = box.w*sw, bh = box.h*sh;
+  let side = Math.min(Math.max(bw, bh) * 1.5, Math.min(sw, sh));
+  let x = Math.max(0, Math.min(sw - side, bx + bw/2 - side/2)), y = Math.max(0, Math.min(sh - side, by + bh/2 - side/2));
+  cx.drawImage(src, x, y, side, side, 0, 0, 224, 224);
+  const score = preds => { let p = 0, label = ''; preds.forEach(q => { if(PRIMATE.test(q.className)){ p += q.probability; if(!label) label = q.className.split(',')[0]; } }); return {p, label}; };
+  const a = score(await model.classify(c, 10));
+  cx.drawImage(src, 0, 0, sw, sh, 0, 0, 224, 224);
+  const b = score(await model.classify(c, 10));
+  return a.p >= b.p ? a : b;
+}
+
+/* ---------------- motion detection ---------------- */
+const PW = 160; let PH = 90;
+const pc = document.createElement('canvas'); const pctx = pc.getContext('2d', {willReadFrequently:true});
+const GX = 16, GY = 9;
+let mask = store.get('ks_mask', null); if(!Array.isArray(mask) || mask.length !== GX*GY) mask = new Array(GX*GY).fill(0);
+let bg = null, motionFrames = 0, curBox = null, busy = false, lastProc = 0;
+function detect(src, sw, sh){
+  const ph = Math.max(40, Math.round(PW*sh/sw));
+  if(pc.width !== PW || pc.height !== ph){ pc.width = PW; pc.height = ph; PH = ph; bg = null; }
+  pctx.drawImage(src, 0, 0, PW, PH);
+  const d = pctx.getImageData(0, 0, PW, PH).data, n = PW*PH, g = new Float32Array(n*3);
+  for(let i=0, j=0; i<n*3; i+=3, j+=4){ g[i] = d[j]; g[i+1] = d[j+1]; g[i+2] = d[j+2]; }
+  if(!bg){ bg = g; return null; }
+  const thr = (52 - S.sens*0.4) * 1.8; // colour difference, catches brown monkeys on brown soil
+  const cw = PW/GX, ch = PH/GY, counts = new Uint16Array(GX*GY);
+  for(let y=0; y<PH; y++){
+    const cy = Math.min(GY-1, (y/ch)|0);
+    for(let x=0; x<PW; x++){
+      const i = (y*PW + x)*3;
+      if(Math.abs(g[i]-bg[i]) + Math.abs(g[i+1]-bg[i+1]) + Math.abs(g[i+2]-bg[i+2]) > thr){ const ci = cy*GX + Math.min(GX-1, (x/cw)|0); if(!mask[ci]) counts[ci]++; }
+    }
+  }
+  const cellPix = cw*ch; let minX=GX, minY=GY, maxX=-1, maxY=-1, active=0;
+  for(let cy=0; cy<GY; cy++) for(let cx=0; cx<GX; cx++){
+    if(counts[cy*GX+cx] > cellPix*0.16){ active++; if(cx<minX)minX=cx; if(cx>maxX)maxX=cx; if(cy<minY)minY=cy; if(cy>maxY)maxY=cy; }
+  }
+  if(active > GX*GY*0.55){ bg = g; return null; } // light change or camera shake
+  for(let i=0;i<n*3;i++) bg[i] += (g[i]-bg[i]) * 0.07;
+  const minCells = Math.max(1, Math.round(6 - S.sens/20));
+  if(active >= minCells) return {x:minX/GX, y:minY/GY, w:(maxX-minX+1)/GX, h:(maxY-minY+1)/GY, active};
+  return null;
+}
+async function onMovement(src, sw, sh, box){
+  const now = performance.now();
+  if(now < scareUntil){ return; }
+  if(!inHours()){ setStatus('sleeping', 'Resting · outside guard hours'); return; }
+  if(now < cooldownUntil){ setStatus('cooldown', 'Movement · waiting ' + Math.ceil((cooldownUntil-now)/1000) + ' s'); return; }
+  let info = null, isMonkey = false;
+  if(source !== 'demo' && S.ai && model){
+    busy = true; setStatus('motion', 'Checking…');
+    try{ info = await classifyBox(src, sw, sh, box); }catch(e){ info = null; }
+    busy = false;
+    isMonkey = !!(info && info.p >= 0.15);
+    if(!isMonkey && !S.anyMotion){ setStatus('motion', 'Movement · not a monkey'); cooldownUntil = performance.now() + 4000; return; }
+  } else if(source !== 'demo' && !S.anyMotion && S.ai && aiStatus === 'loading'){
+    setStatus('motion', 'Movement · AI still loading'); return;
+  } else {
+    isMonkey = source === 'demo';
+  }
+  const kind = isMonkey ? 'monkey' : 'motion';
+  if(armed){ setStatus('scaring', isMonkey ? 'Monkey! Scaring away' : 'Movement! Scaring away'); startScare(kind, info); }
+  else {
+    setStatus('monkey', isMonkey ? 'Monkey in the field · guard off' : 'Movement · guard off');
+    cooldownUntil = performance.now() + 12000;
+    logEvent('seen', info, []);
+  }
+}
+
+/* ---------------- demo field (simulated) ---------------- */
+const scene = document.createElement('canvas'); scene.width = 640; scene.height = 360; const sc = scene.getContext('2d');
+const rows = [196, 222, 252, 288, 330, 378];
+const stalks = rows.map((y, r) => { const sp = 30 + r*9, arr = []; for(let x = -10 + (r%2)*sp/2; x < 660; x += sp + (Math.sin(x*7.3)*3)) arr.push({x, h:(30 + r*9)*(0.85 + ((x*13)%7)/28), cob: ((x*31+r*7)%5) === 0}); return {y, r, arr}; });
+const trees = []; for(let x=-20; x<680; x+=26){ trees.push({x: x + Math.sin(x)*8, y: 132 + Math.cos(x*1.7)*6, r: 24 + ((x*17)%13)}); }
+const demo = {
+  m: {state:'hidden', timer:2500, x:0, y:0, tx:0, ty:0, dir:1, phase:0, speed:50},
+  scare(){ const m = this.m; if(m.state === 'hidden') return; m.state = 'flee'; m.speed = 230; m.tx = m.x + (m.x < 320 ? -120 : 120); m.ty = 118; },
+  update(dt){
+    const m = this.m; m.phase += dt*0.012;
+    if(m.state === 'hidden'){ m.timer -= dt; if(m.timer <= 0){ m.x = 60 + Math.random()*520; m.y = 128; m.tx = Math.max(60, Math.min(580, m.x + (Math.random()-0.5)*260)); m.ty = 245 + Math.random()*70; m.state = 'enter'; m.speed = 60; } return; }
+    if(m.state === 'eat'){ m.timer -= dt; if(m.timer <= 0){ m.state = 'leave'; m.tx = m.x + (Math.random()-0.5)*120; m.ty = 118; m.speed = 45; } return; }
+    const dx = m.tx - m.x, dy = m.ty - m.y, dist = Math.hypot(dx, dy), step = m.speed*dt/1000;
+    if(Math.abs(dx) > 2) m.dir = dx > 0 ? 1 : -1;
+    if(dist <= step){ m.x = m.tx; m.y = m.ty;
+      if(m.state === 'enter'){ m.state = 'eat'; m.timer = 7000 + Math.random()*5000; }
+      else { m.state = 'hidden'; m.timer = (m.speed > 100 ? 9000 : 4000) + Math.random()*6000; }
+    } else { m.x += dx/dist*step; m.y += dy/dist*step; }
+  },
+  draw(ts){
+    const w = 640, h = 360;
+    let gr = sc.createLinearGradient(0,0,0,150); gr.addColorStop(0,'#A9CBE0'); gr.addColorStop(1,'#E2ECD8'); sc.fillStyle = gr; sc.fillRect(0,0,w,150);
+    // far Himalaya + hills
+    sc.fillStyle = '#C9D6DE'; sc.beginPath(); sc.moveTo(380,95); sc.lineTo(450,38); sc.lineTo(495,70); sc.lineTo(530,50); sc.lineTo(600,95); sc.fill();
+    sc.fillStyle = '#F6F9FB'; sc.beginPath(); sc.moveTo(436,50); sc.lineTo(450,38); sc.lineTo(466,52); sc.lineTo(456,50); sc.lineTo(448,56); sc.fill();
+    sc.fillStyle = '#8FAE96'; sc.beginPath(); sc.moveTo(0,110); for(let x=0;x<=w;x+=40) sc.lineTo(x, 92 + Math.sin(x/90)*14 + Math.cos(x/37)*5); sc.lineTo(w,150); sc.lineTo(0,150); sc.fill();
+    // ground
+    gr = sc.createLinearGradient(0,140,0,h); gr.addColorStop(0,'#7E6A3E'); gr.addColorStop(1,'#5A4527'); sc.fillStyle = gr; sc.fillRect(0,140,w,h-140);
+    // forest edge
+    trees.forEach(t => { sc.fillStyle = '#2F5A36'; sc.beginPath(); sc.arc(t.x, t.y, t.r, 0, Math.PI*2); sc.fill(); sc.fillStyle = '#3B6E41'; sc.beginPath(); sc.arc(t.x-5, t.y-6, t.r*0.6, 0, Math.PI*2); sc.fill(); });
+    sc.fillStyle = '#6E7F45'; sc.fillRect(0,150,w,40);
+    const m = this.m; let drawn = m.state === 'hidden';
+    stalks.forEach(row => {
+      if(!drawn && m.y < row.y){ drawMonkey(m); drawn = true; }
+      const sway = Math.sin(ts/1100 + row.r)*1.2*(1 + row.r*0.2);
+      const k = 0.55 + row.r*0.18;
+      row.arr.forEach(s => {
+        const top = row.y - s.h, bend = sway + Math.sin(ts/800 + s.x*0.05)*0.8;
+        sc.strokeStyle = '#3F7F34'; sc.lineWidth = 2.2*k; sc.lineCap = 'round';
+        sc.beginPath(); sc.moveTo(s.x, row.y); sc.quadraticCurveTo(s.x, row.y - s.h*0.6, s.x + bend, top); sc.stroke();
+        sc.strokeStyle = '#5DA548'; sc.lineWidth = 2.6*k;
+        for(let l=1; l<=3; l++){ const ly = row.y - s.h*l/4, dirL = l%2 ? 1 : -1; sc.beginPath(); sc.moveTo(s.x + bend*l/4, ly); sc.quadraticCurveTo(s.x + dirL*10*k, ly - 10*k, s.x + dirL*(16*k) + bend, ly + 2*k); sc.stroke(); }
+        if(s.cob){ sc.fillStyle = '#E8C05A'; sc.beginPath(); sc.ellipse(s.x + 3*k + bend/2, row.y - s.h*0.55, 3*k, 7*k, 0.3, 0, Math.PI*2); sc.fill(); }
+      });
+    });
+    if(!drawn) drawMonkey(m);
+  }
+};
+function drawMonkey(m){
+  if(m.state === 'hidden') return;
+  const s = 0.95 + (m.y - 120)/170*0.9;
+  const bob = m.state === 'eat' ? Math.sin(m.phase*2)*1.5 : Math.abs(Math.sin(m.phase*(m.state==='flee'?3:1.6)))*-3;
+  sc.save(); sc.translate(m.x, m.y + bob); sc.scale(s*m.dir, s);
+  sc.strokeStyle = '#8E7454'; sc.lineCap = 'round';
+  sc.lineWidth = 5; sc.beginPath(); sc.moveTo(-22,-20); sc.quadraticCurveTo(-44,-26,-40,-50); sc.stroke();
+  const k = m.state === 'eat' ? 0 : Math.sin(m.phase*(m.state==='flee'?3:1.6))*7;
+  sc.lineWidth = 7; sc.strokeStyle = '#8E7454';
+  sc.beginPath(); sc.moveTo(-14,-14); sc.lineTo(-16+k, 0); sc.stroke();
+  sc.beginPath(); sc.moveTo(14,-16); sc.lineTo(m.state==='eat'?22:16-k, m.state==='eat'?-30:0); sc.stroke();
+  sc.fillStyle = '#A48A66'; sc.beginPath(); sc.ellipse(0,-24,26,15,-0.18,0,Math.PI*2); sc.fill();
+  sc.beginPath(); sc.arc(25,-40,11.5,0,Math.PI*2); sc.fill();
+  sc.fillStyle = '#E79A86'; sc.beginPath(); sc.ellipse(30,-38,6.5,7.5,0,0,Math.PI*2); sc.fill();
+  sc.fillStyle = '#25170D'; sc.beginPath(); sc.arc(31.5,-41,1.5,0,Math.PI*2); sc.fill();
+  sc.restore();
+}
+
+/* ---------------- render loop ---------------- */
+let lastTs = 0;
+function drawOverlay(){
+  const W = view.width, H = view.height, cw = W/GX, ch = H/GY;
+  const editing = $('#viewer').classList.contains('editing');
+  for(let i=0;i<GX*GY;i++){
+    if(mask[i]){ const x = (i%GX)*cw, y = ((i/GX)|0)*ch; vctx.fillStyle = 'rgba(10,17,12,.55)'; vctx.fillRect(x,y,cw,ch);
+      vctx.strokeStyle = 'rgba(255,255,255,.25)'; vctx.beginPath(); vctx.moveTo(x,y); vctx.lineTo(x+cw,y+ch); vctx.stroke(); }
+  }
+  if(editing){ vctx.strokeStyle = 'rgba(255,255,255,.35)'; vctx.lineWidth = 1; for(let x=1;x<GX;x++){ vctx.beginPath(); vctx.moveTo(x*cw,0); vctx.lineTo(x*cw,H); vctx.stroke(); } for(let y=1;y<GY;y++){ vctx.beginPath(); vctx.moveTo(0,y*ch); vctx.lineTo(W,y*ch); vctx.stroke(); } }
+  if(curBox){
+    const hot = status === 'scaring' || status === 'monkey';
+    vctx.strokeStyle = hot ? '#FF4A3A' : '#F2B233'; vctx.lineWidth = 3;
+    vctx.strokeRect(curBox.x*W, curBox.y*H, curBox.w*W, curBox.h*H);
+  }
+  vctx.font = '600 13px ui-monospace, Menlo, Consolas, monospace'; vctx.fillStyle = 'rgba(10,17,12,.6)';
+  const stamp = 'KHETISATHI CAM 01  ' + new Date().toLocaleTimeString([], {hour12:false});
+  const tw = vctx.measureText(stamp).width; vctx.fillRect(8, H-28, tw+14, 20); vctx.fillStyle = '#E9F2E6'; vctx.fillText(stamp, 15, H-13);
+}
+function frame(ts){
+  requestAnimationFrame(frame);
+  const dt = Math.min(100, ts - (lastTs || ts)); lastTs = ts;
+  let src = null, sw = 0, sh = 0;
+  if(source === 'demo'){ demo.update(dt); demo.draw(ts); src = scene; sw = 640; sh = 360; }
+  else if(vid.readyState >= 2 && vid.videoWidth){ src = vid; sw = vid.videoWidth; sh = vid.videoHeight; }
+  if(!src){ vctx.fillStyle = '#0A110C'; vctx.fillRect(0,0,view.width,view.height); return; }
+  const vh = Math.round(640*sh/sw); if(view.height !== vh){ view.width = 640; view.height = vh; }
+  vctx.drawImage(src, 0, 0, view.width, view.height);
+  if(ts - lastProc > 160 && !busy){
+    lastProc = ts;
+    const box = detect(src, sw, sh); curBox = box;
+    const now = performance.now();
+    if(box) motionFrames++; else motionFrames = Math.max(0, motionFrames - 1);
+    if(now < scareUntil){ if(status !== 'scaring') setStatus('scaring', 'Scaring away'); }
+    else if(box && motionFrames >= 2){ onMovement(src, sw, sh, box); }
+    else if(!box && now > scareUntil){
+      if(!inHours()) setStatus('sleeping', 'Resting · outside guard hours');
+      else if(now < cooldownUntil && armed) setStatus('cooldown', 'Clear · ready in ' + Math.ceil((cooldownUntil-now)/1000) + ' s');
+      else if(status !== 'watching' || statusText !== 'Watching the field') setStatus('watching', 'Watching the field');
+    }
+  }
+  drawOverlay();
+}
+function snapshot(){
+  try{ const c = document.createElement('canvas'); c.width = 192; c.height = Math.round(192*view.height/view.width);
+    const src = source === 'demo' ? scene : vid; c.getContext('2d').drawImage(src, 0, 0, c.width, c.height); return c.toDataURL('image/jpeg', 0.6);
+  }catch(e){ return ''; }
+}
+
+/* mask editing */
+$('#maskBtn').addEventListener('click', () => {
+  const v = $('#viewer'); const on = !v.classList.contains('editing'); v.classList.toggle('editing', on);
+  $('#maskBtn').setAttribute('aria-pressed', String(on)); $('#maskBtn').textContent = on ? 'Done' : 'Ignore areas';
+  $('#maskClear').hidden = !on; $('#maskHint').hidden = !on;
+});
+$('#maskClear').addEventListener('click', () => { mask.fill(0); store.set('ks_mask', mask); });
+view.addEventListener('click', e => {
+  if(!$('#viewer').classList.contains('editing')) return;
+  const r = view.getBoundingClientRect();
+  const cx = Math.min(GX-1, Math.floor((e.clientX - r.left)/r.width*GX)), cy = Math.min(GY-1, Math.floor((e.clientY - r.top)/r.height*GY));
+  const i = cy*GX + cx; mask[i] = mask[i] ? 0 : 1; store.set('ks_mask', mask); bg = null;
+});
+
+/* ================= CROPS ================= */
+const MONTHS = [['बैशाख','Baisakh','Apr–May'],['जेठ','Jestha','May–Jun'],['असार','Asar','Jun–Jul'],['साउन','Shrawan','Jul–Aug'],['भदौ','Bhadra','Aug–Sep'],['असोज','Asoj','Sep–Oct'],['कात्तिक','Kartik','Oct–Nov'],['मंसिर','Mangsir','Nov–Dec'],['पुस','Poush','Dec–Jan'],['माघ','Magh','Jan–Feb'],['फागुन','Falgun','Feb–Mar'],['चैत','Chaitra','Mar–Apr']];
+const RISK = {vh:['Very high','risk-vh'], h:['High','risk-h'], m:['Medium','risk-m'], l:['Low','risk-l'], vl:['Very low','risk-vl']};
+const CROPS = [
+  {id:'maize', en:'Maize', ne:'मकै', npk:[120,60,40], fym:10, risk:'vh', T:{s:[10,11],h:[2,3]}, H:{s:[11,0],h:[3,4]}, split:'At sowing: all DAP, all potash and one third of the urea. Top-dress one third at knee height (about 30–35 days) and the last third just before tassels appear.'},
+  {id:'tomato', en:'Tomato', ne:'गोलभेंडा', npk:[120,80,60], fym:20, risk:'h', T:{s:[4,5],h:[8,9,10]}, H:{s:[10,11],h:[2,3,4]}, split:'At transplanting: all DAP, all potash and one third of the urea. Then one third at 30 days and one third at flowering.'},
+  {id:'rice', en:'Rice', ne:'धान', npk:[100,30,30], fym:6, risk:'m', T:{s:[1,2],h:[6,7]}, H:{s:[0,1],h:[5,6]}, split:'At transplanting: all DAP, all potash and one third of the urea. Top-dress one third at tillering (about 25 days) and one third at panicle start (about 50 days).'},
+  {id:'potato', en:'Potato', ne:'आलु', npk:[100,100,60], fym:20, risk:'m', T:{s:[6,7],h:[9,10]}, H:{s:[9,10],h:[1,2]}, split:'At planting: all DAP, all potash and half the urea. The other half at earthing up (about 30–35 days).'},
+  {id:'cauli', en:'Cauliflower', ne:'काउली', npk:[120,80,60], fym:20, risk:'m', T:{s:[3,4],h:[7,8]}, H:{s:[2,3],h:[5,6]}, split:'At transplanting: all DAP, all potash and one third of the urea. The rest in two splits at 25 and 45 days.'},
+  {id:'wheat', en:'Wheat', ne:'गहुँ', npk:[100,50,25], fym:6, risk:'m', T:{s:[7],h:[11,0]}, H:{s:[6,7],h:[0,1]}, split:'At sowing: all DAP, all potash and half the urea. The other half at the first irrigation (crown root stage, about 21 days).'},
+  {id:'mustard', en:'Mustard', ne:'तोरी', npk:[60,40,20], fym:6, risk:'l', T:{s:[5,6],h:[9,10]}, H:{s:[5,6],h:[10,11]}, split:'At sowing: all DAP, all potash and half the urea. The other half at the first irrigation (about 25–30 days).'},
+  {id:'lentil', en:'Lentil', ne:'मसुरो', npk:[20,40,20], fym:5, risk:'l', T:{s:[6,7],h:[10,11]}, H:{s:[6],h:[11]}, split:'Give everything at sowing. Lentil makes most of its own nitrogen, so no top-dressing is needed.'},
+  {id:'ginger', en:'Ginger', ne:'अदुवा', npk:[75,50,50], fym:25, risk:'vl', T:{s:[11,0],h:[7,8]}, H:{s:[11,0],h:[7,8]}, split:'At planting: all DAP, half the potash and one third of the urea. The rest in splits at 45 and 90 days with earthing up. Mulch well.'},
+  {id:'turmeric', en:'Turmeric', ne:'बेसार', npk:[80,40,80], fym:20, risk:'vl', T:{s:[11,0],h:[8,9]}, H:{s:[11,0],h:[8,9]}, split:'At planting: all DAP, half the potash and one third of the urea. The rest in splits at 45 and 90 days with earthing up.'},
+  {id:'chilli', en:'Chilli', ne:'खुर्सानी', npk:[100,60,50], fym:20, risk:'vl', T:{s:[9,10],h:[1,2,3]}, H:{s:[10,11],h:[3,4,5]}, split:'At transplanting: all DAP, all potash and one third of the urea. Then one third at 30 days and one third at flowering.'},
+  {id:'garlic', en:'Garlic', ne:'लसुन', npk:[100,60,60], fym:20, risk:'vl', T:{s:[5,6],h:[11,0]}, H:{s:[5,6],h:[0,1]}, split:'At planting: all DAP, all potash and half the urea. The other half at 30–40 days.'},
+  {id:'colocasia', en:'Colocasia (taro)', ne:'पिँडालु', npk:[60,40,40], fym:15, risk:'vl', T:{s:[11,0],h:[5,6,7]}, H:{s:[11,0],h:[6,7]}, split:'At planting: all DAP, all potash and half the urea. The other half at earthing up (about 45 days).'}
+];
+function nepaliMonthIndex(d){ const m = d.getMonth(), day = d.getDate(); return ((m - 3 - (day < 14 ? 1 : 0)) % 12 + 12) % 12; }
+const nowIdx = nepaliMonthIndex(new Date());
+let zone = 'T';
+function monthState(cal, i){
+  if(cal.s.includes(i)) return 'sow'; if(cal.h.includes(i)) return 'harvest';
+  const s = cal.s[cal.s.length-1], h = cal.h[0];
+  const span = (h - s + 12) % 12, off = (i - s + 12) % 12;
+  return (off > 0 && off < span) ? 'grow' : '';
+}
+function renderCal(){
+  let html = '<thead><tr><th></th>' + MONTHS.map((m,i) => `<th class="${i===nowIdx?'now':''}"><span class="mn">${m[1]}</span><br>${m[0]}<br><span style="font-weight:400">${m[2]}</span></th>`).join('') + '<th>Monkey risk</th></tr></thead><tbody>';
+  CROPS.forEach(c => {
+    const cal = c[zone];
+    html += `<tr><td class="name"><b>${c.en}</b><small class="ne">${c.ne}</small></td>` +
+      MONTHS.map((_,i) => { const st = monthState(cal, i); return `<td class="${st} ${i===nowIdx?'nowcol':''}" title="${MONTHS[i][1]}: ${st || '—'}"></td>`; }).join('') +
+      `<td class="risk"><span class="chip ${RISK[c.risk][1]}">${RISK[c.risk][0]}</span></td></tr>`;
+  });
+  $('#cal').innerHTML = html + '</tbody>';
+  $('#nowMonth').textContent = `· ${MONTHS[nowIdx][0]} (${MONTHS[nowIdx][1]})`;
+  const sow = CROPS.filter(c => c[zone].s.includes(nowIdx)), harv = CROPS.filter(c => c[zone].h.includes(nowIdx));
+  const li = c => `<li>${c.en} · ${c.ne}${c.risk==='vh'||c.risk==='h' ? ' <span class="chip risk-vh">guard it</span>' : ''}</li>`;
+  $('#nowSow').innerHTML = sow.length ? sow.map(li).join('') : '<li class="muted">Nothing major this month</li>';
+  $('#nowHarv').innerHTML = harv.length ? harv.map(li).join('') : '<li class="muted">Nothing major this month</li>';
+}
+$('#zT').addEventListener('click', () => { zone = 'T'; $('#zT').setAttribute('aria-pressed','true'); $('#zH').setAttribute('aria-pressed','false'); renderCal(); });
+$('#zH').addEventListener('click', () => { zone = 'H'; $('#zH').setAttribute('aria-pressed','true'); $('#zT').setAttribute('aria-pressed','false'); renderCal(); });
+
+const fCrop = $('#fCrop'); fCrop.innerHTML = CROPS.map(c => `<option value="${c.id}">${c.en} · ${c.ne}</option>`).join('');
+const kg = v => v >= 1000 ? (v/1000).toFixed(v >= 10000 ? 0 : 1) + ' t' : (v >= 10 ? Math.round(v) : v.toFixed(1)) + ' kg';
+function calcFert(){
+  const c = CROPS.find(x => x.id === fCrop.value), area = Math.max(0, +$('#fArea').value || 0), ha = area * (+$('#fUnit').value) / 10000;
+  const [N,P,K] = c.npk.map(v => v*ha);
+  const dap = P/0.46, urea = Math.max(0, (N - dap*0.18)/0.46), mop = K/0.60, fym = c.fym*1000*ha;
+  $('#rUrea').textContent = kg(urea); $('#rDap').textContent = kg(dap); $('#rMop').textContent = kg(mop);
+  $('#rFym').textContent = kg(fym);
+  $('#rFymK').textContent = 'Compost / FYM' + (fym >= 30 && fym < 20000 ? ` ≈ ${Math.round(fym/30)} doko` : '');
+  $('#rBags').textContent = [urea, dap, mop].reduce((a, v) => a + (v > 0 ? Math.ceil(v/50) : 0), 0);
+  $('#rHa').textContent = ha < 0.1 ? ha.toFixed(3) : ha.toFixed(2);
+  $('#rNutr').textContent = `${c.en} needs N ${c.npk[0]} : P₂O₅ ${c.npk[1]} : K₂O ${c.npk[2]} kg per hectare, plus ${c.fym} t compost. For your land: N ${N.toFixed(1)} kg, P₂O₅ ${P.toFixed(1)} kg, K₂O ${K.toFixed(1)} kg. One doko of compost is taken as about 30 kg.`;
+  $('#rSplit').textContent = c.split;
+}
+['change','input'].forEach(ev => { fCrop.addEventListener(ev, calcFert); $('#fArea').addEventListener(ev, calcFert); $('#fUnit').addEventListener(ev, calcFert); });
+
+/* ================= SETUP code ================= */
+const CODE = `// KhetiSathi sensor post: Arduino Nano + PIR + DFPlayer Mini
+// Library: DFRobotDFPlayerMini (install from Arduino Library Manager)
+#include <SoftwareSerial.h>
+#include <DFRobotDFPlayerMini.h>
+
+const int PIR_PIN    = 2;    // HC-SR501 OUT
+const int STROBE_PIN = 6;    // MOSFET module -> 12 V LED light
+const int SIREN_PIN  = 7;    // relay module -> 12 V siren (optional)
+const int TRACKS     = 6;    // number of sounds on SD card: 0001.mp3 ... 0006.mp3
+const unsigned long SCARE_MS    = 8000;   // scare length
+const unsigned long COOLDOWN_MS = 25000;  // wait before next scare
+
+SoftwareSerial dfSerial(10, 11);          // RX, TX (TX -> DFPlayer RX via 1k resistor)
+DFRobotDFPlayerMini player;
+unsigned long lastScare = 0;
+int lastTrack = 0;
+
+void setup() {
+  pinMode(PIR_PIN, INPUT);
+  pinMode(STROBE_PIN, OUTPUT);
+  pinMode(SIREN_PIN, OUTPUT);
+  dfSerial.begin(9600);
+  player.begin(dfSerial);
+  player.volume(30);                      // 0 to 30
+  randomSeed(analogRead(A0));
+  delay(30000);                           // PIR warm-up
+}
+
+void scare() {
+  int track;
+  do { track = random(1, TRACKS + 1); } while (track == lastTrack && TRACKS > 1);
+  lastTrack = track;                      // never the same sound twice in a row
+  player.play(track);
+  bool useSiren = random(0, 3) == 0;      // siren only sometimes
+  if (useSiren) digitalWrite(SIREN_PIN, HIGH);
+  unsigned long start = millis();
+  while (millis() - start < SCARE_MS) {   // uneven flashing is harder to get used to
+    digitalWrite(STROBE_PIN, HIGH); delay(60 + random(0, 90));
+    digitalWrite(STROBE_PIN, LOW);  delay(60 + random(0, 160));
+  }
+  digitalWrite(SIREN_PIN, LOW);
+  player.stop();
+  lastScare = millis();
+}
+
+void loop() {
+  if (digitalRead(PIR_PIN) == HIGH && millis() - lastScare > COOLDOWN_MS) {
+    scare();
+  }
+  delay(50);
+}`;
+$('#code').textContent = CODE;
+$('#copyCode').addEventListener('click', async () => {
+  const b = $('#copyCode');
+  try{ await navigator.clipboard.writeText($('#code').textContent); b.textContent = 'Copied'; }
+  catch(e){ const r = document.createRange(); r.selectNodeContents($('#code')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press Ctrl+C'; }
+  setTimeout(() => { b.textContent = 'Copy code'; }, 2500);
+});
+
+/* ---------------- start ---------------- */
+setSourceButtons(); refreshArm(); updateAIState(); schedulePatrol(); renderLog(); renderCal(); calcFert();
+setStatus('watching', 'Watching the field');
+requestAnimationFrame(frame);
+})();
+</script>
+
+</body>
+</html>
