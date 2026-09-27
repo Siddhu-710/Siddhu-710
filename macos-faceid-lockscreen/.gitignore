@@ -29,6 +29,9 @@ Package.resolved
 
 # Editors
 .vscode/
+!.vscode/
+.vscode/*
+!.vscode/tasks.json
 .idea/
 *.swp
 *~

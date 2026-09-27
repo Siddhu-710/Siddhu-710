@@ -91,6 +91,14 @@ open FaceIDLock.xcodeproj
 
 The project signs with **Sign to Run Locally** (ad-hoc) by default, so no Apple Developer account is needed. If you pick your own team in *Target ▸ Signing & Capabilities*, macOS will also remember the camera permission across rebuilds (see [Troubleshooting](#troubleshooting)).
 
+### Run from VS Code
+
+This is a native macOS app, so the **Go Live** extension cannot display it in a browser. With Xcode 16.3 or later installed and selected in **Xcode ▸ Settings ▸ Locations ▸ Command Line Tools**, run **Tasks: Run Build Task** in VS Code and choose **Build and Run FaceIDLock**. VS Code shows build output in its terminal and opens the app when the build succeeds.
+
+### Browser preview
+
+For a browser-based visual simulation, run **Tasks: Run Task** in VS Code and choose **Serve FaceIDLock Web Preview**, then open [http://127.0.0.1:4173](http://127.0.0.1:4173). You can also open `web-preview/index.html` with Live Server. The preview simulates scanning and unlocking; it does not use the camera or macOS authentication.
+
 ### Option B: create the project yourself and copy the files in
 
 1. In Xcode choose **File ▸ New ▸ Project… ▸ macOS ▸ App**.

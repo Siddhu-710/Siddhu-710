@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111713">
+  <title>Face ID Lock | Web Preview</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Avenir Next", Avenir, "SF Pro Display", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      --ink: #f4f6ef;
+      --muted: #b4beb6;
+      --soft: #84928b;
+      --glass: rgb(246 249 240 / 10%);
+      --line: rgb(246 249 240 / 18%);
+      --mint: #a8e0c1;
+      --coral: #efb19a;
+      --gold: #f0d49a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 16% 18%, rgb(165 104 79 / 26%), transparent 42%),
+        radial-gradient(ellipse at 82% 26%, rgb(49 128 112 / 28%), transparent 43%),
+        radial-gradient(ellipse at 68% 94%, rgb(171 135 77 / 19%), transparent 42%),
+        #111713;
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: -16%;
+      content: "";
+      pointer-events: none;
+      background: radial-gradient(ellipse, rgb(197 220 197 / 7%), transparent 63%);
+      filter: blur(34px);
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    button { font: inherit; }
+
+    .screen {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100svh;
+      padding: 30px 44px 24px;
+      isolation: isolate;
+    }
+
+    .topbar, .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand, .preview-tag {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: rgb(244 246 239 / 79%);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 30px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid rgb(244 246 239 / 34%);
+      border-radius: 50%;
+      color: var(--mint);
+      font-size: 15px;
+    }
+
+    .preview-tag { color: var(--soft); font-size: 11px; font-weight: 500; }
+    .preview-tag::before { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); content: ""; }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0 38px;
+      text-align: center;
+    }
+
+    .clock-block { margin-bottom: clamp(34px, 7vh, 76px); }
+
+    #clock {
+      font-size: 112px;
+      font-weight: 600;
+      line-height: .98;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #date {
+      margin-top: 13px;
+      color: rgb(244 246 239 / 77%);
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .auth-panel { display: flex; flex-direction: column; align-items: center; }
+
+    .avatar {
+      display: grid;
+      width: 78px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid rgb(255 255 255 / 34%);
+      border-radius: 50%;
+      background: linear-gradient(145deg, #a4aba3, #636c66);
+      box-shadow: 0 12px 32px rgb(0 0 0 / 22%);
+      color: white;
+      font-size: 29px;
+      font-weight: 500;
+    }
+
+    .name { margin-top: 13px; font-size: 18px; font-weight: 600; }
+
+    .scan-glyph {
+      position: relative;
+      width: 82px;
+      height: 82px;
+      margin: 21px 0 19px;
+      color: var(--ink);
+      transition: color .3s ease, transform .3s ease;
+    }
+
+    .scan-glyph::before {
+      position: absolute;
+      inset: 4px;
+      border-radius: 13px;
+      background:
+        linear-gradient(currentColor 0 0) left top / 23px 3px,
+        linear-gradient(currentColor 0 0) left top / 3px 23px,
+        linear-gradient(currentColor 0 0) right top / 23px 3px,
+        linear-gradient(currentColor 0 0) right top / 3px 23px,
+        linear-gradient(currentColor 0 0) left bottom / 23px 3px,
+        linear-gradient(currentColor 0 0) left bottom / 3px 23px,
+        linear-gradient(currentColor 0 0) right bottom / 23px 3px,
+        linear-gradient(currentColor 0 0) right bottom / 3px 23px;
+      background-repeat: no-repeat;
+      content: "";
+      opacity: .88;
+      transition: inset .35s ease, color .3s ease;
+    }
+
+    .scan-glyph.searching { color: var(--mint); }
+    .scan-glyph.searching::before { inset: 11px; }
+    .scan-glyph.searching::after {
+      position: absolute;
+      top: 15px;
+      right: 13px;
+      left: 13px;
+      height: 2px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, transparent, var(--mint), transparent);
+      box-shadow: 0 0 14px rgb(168 224 193 / 85%);
+      content: "";
+      animation: scan 1.8s ease-in-out infinite alternate;
+    }
+
+    .scan-glyph.detected, .scan-glyph.authenticating { color: #b1d9e7; }
+    .scan-glyph.detected::before, .scan-glyph.authenticating::before { inset: 13px; }
+    .scan-glyph.detected::after, .scan-glyph.authenticating::after {
+      position: absolute;
+      inset: 24px;
+      border: 2px dotted currentColor;
+      border-radius: 50%;
+      content: "";
+      animation: rotate 5s linear infinite;
+    }
+
+    .scan-glyph.success { color: var(--mint); }
+    .scan-glyph.success::before { opacity: 0; transform: scale(.7); }
+    .scan-glyph.success::after { position: absolute; inset: 0; content: "✓"; font-size: 76px; font-weight: 400; line-height: 82px; }
+    .scan-glyph.failure { color: var(--coral); }
+    .scan-glyph.inactive { color: var(--soft); }
+
+    #status { font-size: 17px; font-weight: 600; }
+    #detail { min-height: 20px; max-width: 390px; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      min-height: 44px;
+      margin-top: 21px;
+    }
+
+    .action {
+      min-height: 42px;
+      padding: 0 17px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--glass);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .18s ease, transform .18s ease, border-color .18s ease;
+      backdrop-filter: blur(14px);
+    }
+
+    .action:hover { transform: translateY(-1px); border-color: rgb(255 255 255 / 35%); background: rgb(246 249 240 / 17%); }
+    .action:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
+    .action.primary { border-color: transparent; background: #e8eee4; color: #18211c; }
+    .action.primary:hover { background: white; }
+    .action[hidden] { display: none; }
+
+    .camera-state {
+      position: fixed;
+      top: 26px;
+      right: 30px;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      background: rgb(16 25 20 / 46%);
+      color: #dcefe2;
+      font-size: 11px;
+      backdrop-filter: blur(16px);
+    }
+
+    .camera-state.active { display: flex; }
+    .camera-state::before { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); content: ""; }
+
+    .footer { color: var(--soft); font-size: 11px; }
+    .footer-note { max-width: 640px; line-height: 1.5; }
+    .footer-hint { white-space: nowrap; }
+
+    .unlocked-content { display: none; max-width: 760px; }
+    .unlocked-content.visible { display: block; animation: arrive .45s ease both; }
+    .unlocked-pill { display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--glass); color: var(--mint); font-size: 12px; }
+    .unlocked-pill::before { content: "✓"; font-size: 15px; }
+    .unlocked-content h1 { margin: 22px 0 10px; font-size: 42px; font-weight: 600; }
+    .unlocked-content p { margin: 0; color: var(--muted); font-size: 14px; }
+    .info-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; margin: 34px 0 24px; text-align: left; }
+    .info-item { min-height: 108px; padding: 17px; border: 1px solid var(--line); border-radius: 7px; background: rgb(246 249 240 / 8%); }
+    .info-item strong { display: block; margin-bottom: 11px; color: var(--soft); font-size: 11px; font-weight: 600; }
+    .info-item span { font-size: 13px; line-height: 1.45; }
+
+    @keyframes scan { from { transform: translateY(0); } to { transform: translateY(50px); } }
+    @keyframes rotate { to { transform: rotate(1turn); } }
+    @keyframes drift { to { transform: translate(5%, -3%) scale(1.08); } }
+    @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 680px) {
+      .screen { min-height: 100svh; padding: 20px 19px 17px; }
+      #clock { font-size: 72px; }
+      #date { font-size: 14px; }
+      .clock-block { margin-bottom: 42px; }
+      .camera-state { top: 67px; right: 18px; }
+      .info-row { grid-template-columns: 1fr; margin: 25px 0 18px; }
+      .info-item { min-height: auto; }
+      .unlocked-content h1 { font-size: 32px; }
+      .footer { align-items: flex-end; }
+      .footer-hint { display: none; }
+    }
+
+    @media (max-height: 700px) and (min-width: 681px) {
+      .screen { padding-top: 18px; padding-bottom: 14px; }
+      .clock-block { margin-bottom: 25px; }
+      #clock { font-size: 82px; }
+      .scan-glyph { margin-top: 14px; margin-bottom: 13px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">⌑</span><span>FACE ID LOCK</span></div>
+      <div class="preview-tag">BROWSER PREVIEW · SIMULATION</div>
+    </header>
+
+    <div class="camera-state" id="camera-state" aria-live="polite">Simulated scan</div>
+
+    <main>
+      <section class="clock-block" aria-label="Current time and date">
+        <div id="clock"></div>
+        <div id="date"></div>
+      </section>
+
+      <section class="auth-panel" id="auth-panel" aria-live="polite">
+        <div class="avatar" aria-hidden="true">SD</div>
+        <div class="name">Siddhu</div>
+        <div class="scan-glyph" id="scan-glyph" aria-hidden="true"></div>
+        <div id="status">Locked</div>
+        <div id="detail">Choose a demo sign-in method to continue.</div>
+        <div class="actions">
+          <button class="action primary" id="scan-button" type="button">Simulate face scan</button>
+          <button class="action" id="password-button" type="button">Simulate password</button>
+          <button class="action" id="cancel-button" type="button" hidden>Cancel</button>
+        </div>
+      </section>
+
+      <section class="unlocked-content" id="unlocked-content" aria-live="polite">
+        <div class="unlocked-pill">Unlocked · simulated</div>
+        <h1 id="greeting">Welcome back, Siddhu</h1>
+        <p>Preview state only. No system account was authenticated.</p>
+        <div class="info-row">
+          <div class="info-item"><strong>IDENTITY</strong><span>Demo confirmation</span></div>
+          <div class="info-item"><strong>CAMERA</strong><span>Off · no frames captured</span></div>
+          <div class="info-item"><strong>MODE</strong><span>Browser simulation</span></div>
+        </div>
+        <button class="action primary" id="lock-button" type="button">Lock preview</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-note">Demo only — this browser preview does not access the camera, authenticate you, or lock your Mac.</div>
+      <div class="footer-hint">Use ⌃⌘Q for the real macOS lock screen</div>
+    </footer>
+  </div>
+
+  <script>
+    const clock = document.querySelector("#clock");
+    const date = document.querySelector("#date");
+    const status = document.querySelector("#status");
+    const detail = document.querySelector("#detail");
+    const glyph = document.querySelector("#scan-glyph");
+    const cameraState = document.querySelector("#camera-state");
+    const authPanel = document.querySelector("#auth-panel");
+    const unlockedContent = document.querySelector("#unlocked-content");
+    const scanButton = document.querySelector("#scan-button");
+    const passwordButton = document.querySelector("#password-button");
+    const cancelButton = document.querySelector("#cancel-button");
+    const lockButton = document.querySelector("#lock-button");
+    const pendingTimers = new Set();
+
+    function updateClock() {
+      const now = new Date();
+      clock.textContent = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" }).format(now);
+      date.textContent = new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" }).format(now);
+    }
+
+    function later(callback, delay) {
+      const timer = window.setTimeout(() => {
+        pendingTimers.delete(timer);
+        callback();
+      }, delay);
+      pendingTimers.add(timer);
+    }
+
+    function clearTimers() {
+      pendingTimers.forEach(window.clearTimeout);
+      pendingTimers.clear();
+    }
+
+    function showState(title, copy, phase, scanning = false) {
+      status.textContent = title;
+      detail.textContent = copy;
+      glyph.className = `scan-glyph${phase ? ` ${phase}` : ""}`;
+      cameraState.classList.toggle("active", scanning);
+    }
+
+    function resetPreview() {
+      clearTimers();
+      unlockedContent.classList.remove("visible");
+      authPanel.hidden = false;
+      scanButton.hidden = false;
+      passwordButton.hidden = false;
+      cancelButton.hidden = true;
+      showState("Locked", "Choose a demo sign-in method to continue.", "");
+    }
+
+    function unlockPreview() {
+      cameraState.classList.remove("active");
+      authPanel.hidden = true;
+      unlockedContent.classList.add("visible");
+    }
+
+    function simulateAuthentication() {
+      showState("Authenticating…", "Simulating a successful demo confirmation.", "authenticating");
+      later(() => {
+        showState("Welcome", "Unlocking the preview…", "success");
+        later(unlockPreview, 700);
+      }, 900);
+    }
+
+    function startFaceScan() {
+      clearTimers();
+      scanButton.hidden = true;
+      passwordButton.hidden = true;
+      cancelButton.hidden = false;
+      showState("Starting camera…", "No camera is used in this browser preview.", "", true);
+      later(() => {
+        showState("Looking for your face…", "Simulated scan · frames are not captured.", "searching", true);
+        later(() => {
+          showState("Face detected", "Hold still…", "detected");
+          cameraState.classList.remove("active");
+          later(simulateAuthentication, 800);
+        }, 2300);
+      }, 650);
+    }
+
+    scanButton.addEventListener("click", startFaceScan);
+    passwordButton.addEventListener("click", () => {
+      clearTimers();
+      scanButton.hidden = true;
+      passwordButton.hidden = true;
+      cancelButton.hidden = false;
+      simulateAuthentication();
+    });
+    cancelButton.addEventListener("click", resetPreview);
+    lockButton.addEventListener("click", resetPreview);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !cancelButton.hidden) resetPreview();
+      if (event.key === "Enter" && !authPanel.hidden && !scanButton.hidden) startFaceScan();
+    });
+
+    updateClock();
+    window.setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

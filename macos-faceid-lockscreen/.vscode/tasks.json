@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve FaceIDLock Web Preview",
+      "type": "shell",
+      "command": "node web-preview/server.js",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "faceid-preview",
+        "pattern": [
+          {
+            "regexp": "^(.*)$",
+            "message": 1
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "endsPattern": "^FaceIDLock preview: http://127\\.0\\.0\\.1:4173$"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Build and Run FaceIDLock",
+      "type": "shell",
+      "command": "xcodebuild -project FaceIDLock.xcodeproj -scheme FaceIDLock -configuration Debug -destination 'platform=macOS' -derivedDataPath .build/DerivedData CODE_SIGN_IDENTITY=- build && open .build/DerivedData/Build/Products/Debug/FaceIDLock.app",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}
