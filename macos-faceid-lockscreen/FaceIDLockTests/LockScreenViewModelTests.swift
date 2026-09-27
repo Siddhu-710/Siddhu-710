@@ -3,12 +3,18 @@ import XCTest
 
 @MainActor
 final class LockScreenViewModelTests: XCTestCase {
+    // Default arguments are evaluated outside the main actor, so the main-actor mock is
+    // created in the body instead.
     private func makeViewModel(
-        scanner: MockFaceScanner = MockFaceScanner(),
+        scanner: MockFaceScanner? = nil,
         authenticator: MockAuthenticator = MockAuthenticator(),
         configuration: LockScreenConfiguration = .testing()
     ) -> LockScreenViewModel {
-        LockScreenViewModel(faceScanner: scanner, authenticator: authenticator, loadConfiguration: { configuration })
+        LockScreenViewModel(
+            faceScanner: scanner ?? MockFaceScanner(),
+            authenticator: authenticator,
+            loadConfiguration: { configuration }
+        )
     }
 
     func testFaceScanUnlocksAndTurnsCameraOff() async {
