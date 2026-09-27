@@ -5,20 +5,6 @@
       "label": "Serve FaceIDLock Web Preview",
       "type": "shell",
       "command": "node web-preview/server.js",
-      "isBackground": true,
-      "problemMatcher": {
-        "owner": "faceid-preview",
-        "pattern": [
-          {
-            "regexp": "^(.*)$",
-            "message": 1
-          }
-        ],
-        "background": {
-          "activeOnStart": true,
-          "endsPattern": "^FaceIDLock preview: http://127\\.0\\.0\\.1:4173$"
-        }
-      },
       "presentation": {
         "reveal": "always",
         "panel": "dedicated"
