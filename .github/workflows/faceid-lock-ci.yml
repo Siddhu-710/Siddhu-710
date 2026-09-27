@@ -26,6 +26,13 @@ jobs:
         run: |
           xcodebuild -version
           swift --version
+          {
+            echo "### Toolchain"
+            echo '```'
+            xcodebuild -version
+            swift --version 2>&1
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Test
         run: |
@@ -35,7 +42,27 @@ jobs:
             -scheme FaceIDLock \
             -destination 'platform=macOS' \
             CODE_SIGN_IDENTITY=- \
-            | tee xcodebuild.log
+            2>&1 | tee xcodebuild.log
+
+      # Logs need a GitHub sign-in to view; annotations and the summary are public.
+      - name: Report failures
+        if: failure()
+        run: |
+          grep -E ": (error|fatal error): " xcodebuild.log | sort -u | head -40 > errors.txt || true
+          grep -E "^(xcodebuild: )?error: |: error: -|Test Case .* failed|XCTAssert|\*\* (BUILD|TEST) FAILED" xcodebuild.log | sort -u | head -40 >> errors.txt || true
+          {
+            echo "### xcodebuild failures"
+            echo '```'
+            cat errors.txt
+            echo '```'
+            echo "### Last 60 log lines"
+            echo '```'
+            tail -60 xcodebuild.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          while IFS= read -r line; do
+            echo "::error::${line#"$GITHUB_WORKSPACE/"}"
+          done < errors.txt
 
       - name: Upload log on failure
         if: failure()
