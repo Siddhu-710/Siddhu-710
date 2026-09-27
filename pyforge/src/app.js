@@ -395,7 +395,7 @@ function go(target, opts = {}) {
   $('#view-login').hidden = view !== 'login';
   $('#view-app').hidden = view !== 'app';
   document.body.classList.toggle('app-mode', view === 'app');
-  Scene.setMode(view === 'app' ? 'off' : view);
+  Scene.setMode(view);
   if (view === 'login') { Login.open(opts); } else { Login.close(); }
   if (view === 'app') showPane(pane || state.pane, lesson);
   let hash = view === 'app' ? (pane === 'learn' && state.lesson ? 'learn-' + state.lesson : (pane || state.pane)) : view;

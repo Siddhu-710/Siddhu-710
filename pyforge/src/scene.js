@@ -205,6 +205,9 @@ const Scene = (() => {
     if (m === 'home') {
       coilPos.tx = narrow ? 1.9 : 2.7; coilPos.ty = narrow ? 2.4 : 0.1; coilPos.ts = narrow ? 0.6 : 1;
       cam.tz = narrow ? 14 : 11.5; cam.ty = 1.1;
+    } else if (m === 'app') {
+      coilPos.tx = narrow ? 1.7 : 3.9; coilPos.ty = narrow ? -1.6 : -0.2; coilPos.ts = narrow ? 0.55 : 0.85;
+      cam.tz = narrow ? 15 : 13; cam.ty = 0.8;
     } else if (m === 'login') {
       coilPos.tx = narrow ? 0 : -3.4; coilPos.ty = narrow ? -1.2 : -0.4; coilPos.ts = narrow ? 0.7 : 0.95;
       cam.tz = narrow ? 15 : 12.5; cam.ty = 0.6;
@@ -221,6 +224,7 @@ const Scene = (() => {
     const slow = reduced ? 0 : 1;
     mouse.x += (mouse.tx - mouse.x) * ease * 0.9; mouse.y += (mouse.ty - mouse.y) * ease * 0.9;
     const sc = mode === 'home' ? Math.min(scrollY / 900, 1) : 0;
+    const spin = scrollY * 0.0022;                    // every page: the coil turns as you scroll
     coilPos.x += (coilPos.tx - coilPos.x) * ease * 0.6;
     coilPos.y += (coilPos.ty - sc * 1.2 - coilPos.y) * ease * 0.6;
     coilPos.s += (coilPos.ts - coilPos.s) * ease * 0.6;
@@ -228,7 +232,7 @@ const Scene = (() => {
 
     coil.position.set(coilPos.x, coilPos.y + Math.sin(t * 0.8) * 0.12 * slow, 0);
     coil.scale.setScalar(coilPos.s);
-    coil.rotation.y = t * 0.22 * slow + sc * 2.2 + mouse.x * 0.35;
+    coil.rotation.y = t * 0.22 * slow + spin + mouse.x * 0.35;
     coil.rotation.x = -0.12 + mouse.y * 0.12;
     coil.rotation.z = 0.08;
     core.rotation.x = t * 0.5 * slow; core.rotation.y = t * 0.7 * slow;
