@@ -58,5 +58,17 @@ Fertilizer doses are typical recommendations for improved varieties. A soil test
 | `index.html` | The whole app in one file (no install, works offline after first load) |
 | `assets/` | Logo as SVG and PNG |
 | `arduino/khetisathi_post/` | Arduino sketch for the sensor post |
+| `pyforge/` | PyForge, a separate project: a Python learning platform (see below) |
 
 Your visit log and settings are saved only on the device you use.
+
+---
+
+## Also in this repository: PyForge 🐍
+
+A Python learning platform with a 3D landing page, a hanging login card with a demo account (`demo@pyforge.dev` / `Python@123`), 28 lessons from beginner to pro with auto-checked tasks, a playground and an Approval API lab.
+
+- Online (with GitHub Pages on): `https://siddhu-710.github.io/Siddhu-710/pyforge/`
+- On your computer: `cd pyforge && python3 server.py`, then open `http://localhost:8000`
+
+Details in [`pyforge/README.md`](pyforge/README.md).
